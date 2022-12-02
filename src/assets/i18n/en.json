@@ -1,0 +1,53 @@
+{
+  "home": {
+    "title":"Tasks Management",
+    "home": "Home",
+    "grades": "Grades",
+    "student": "Students",
+    "tasks": "Tasks",
+    "assign": "ASAssign dates",
+    "calendar": "Schedule",
+    "info": "About",
+    "language": "Change language: ",
+    "spa": "spain flag icon",
+    "eng": "united kingdom flag icon"
+  },
+  "detail": {
+    "titleP": "Studens data",
+    "titleT": "Task data",
+    "titleA": "Data assignment",
+    "name": "Name",
+    "surname": "Surname",
+    "image": "Image",
+    "warning": "Warning"
+  },
+  "people": {
+    "name": "Enter the name ...",
+    "surname": "Enter the surname ...",
+    "nickname": "Enter the nickname ...",
+    "image": "Enter link to image ...",
+    "alert": "Are you sure you want to delete the studen?",
+    "txtWarning": "That person cannot be deleted"
+  },
+  "task": {
+    "name": "Enter task name ...",
+    "duration": "Enter task duration ...",
+    "task1": "Exam",
+    "task2": "Classwork",
+    "alert": "Are you sure you want to delete this task?",
+    "warning": "Unable to delete this task because it already has a due date"
+  },
+  "assign": {
+    "person": "Select grade",
+    "task": "Select task",
+    "date": "Select date and time"
+  },
+  "button": {
+    "new": "Create",
+    "edit": "Edit",
+    "delete": "Delete",
+    "close": "Close",
+    "cancel": "Cancel",
+    "apply": "Apply"
+  }
+}

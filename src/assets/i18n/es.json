@@ -1,0 +1,52 @@
+{
+  "home": {
+    "title":"Controla las Tareas",
+    "home": "Inicio",
+    "grades": "Cursos",
+    "student": "Alumnos",
+    "tasks": "Tareas",
+    "assign": "Asignar fechas",
+    "calendar": "Horario",
+    "info": "Acerca de",
+    "language": "Elige idioma: ",
+    "spa": "icono bandera españa",
+    "eng": "icono bandera reino unido"
+  },
+  "detail": {
+    "titleP": "Datos de los alumnos",
+    "titleT": "Datos de la tarea",
+    "titleA": "Asignar fechas",
+    "name": "Nombre",
+    "surname": "Apellidos",
+    "image": "Imagen",
+    "warning": "Advertencia"
+  },
+  "people": {
+    "name": "Introduce el nombre ...",
+    "surname": "Introduce los apellidos ...",
+    "image": "Introduce enlace a imagen ...",
+    "alert": "¿Estas seguro de que desea borrar este alumno?",
+    "warning": "No se puede borrar al alumno"
+  },
+  "task": {
+    "name": "Selecciona la tarea",
+    "infoTarea": "Introduce información de la tarea",
+    "task1": "Examen",
+    "task2": "Trabajo",
+    "alert": "¿Estas seguro de que desea borrar esta tarea?",
+    "warning": "No se puede borrar esta tarea porque ya tiene fecha de entrega"
+  },
+  "assign": {
+    "curso": "Selecciona curso",
+    "task": "Selecciona tarea ",
+    "date": "Selecciona fecha y hora"
+  },
+  "button": {
+    "new": "Crear",
+    "edit": "Editar",
+    "delete": "Borrar",
+    "close": "Cerrar",
+    "cancel": "Cancelar",
+    "apply": "Aceptar"
+  }
+}

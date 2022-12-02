@@ -1,0 +1,39 @@
+<!--  -->
+
+<ng-container *ngIf="student">
+  <ion-header>
+    <ion-toolbar color="tertiary">
+      <ion-title>Edit Person</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding">
+    <ion-item>
+      <ion-label>Name</ion-label>
+      <ion-input [(ngModel)]="student.name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Surname</ion-label>
+      <ion-input [(ngModel)]="student.surname"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input [(ngModel)]="student.email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Picture</ion-label>
+      <ion-input [(ngModel)]="student.picture"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Grade</ion-label>
+      <ion-input [(ngModel)]="student.grade"></ion-input>
+    </ion-item>
+    <ion-button (click)="updateStudent()" color="success" size="small">
+      Update
+    </ion-button>
+    <ion-button [routerLink]="'/students'" color="danger" size="small">
+      Cancel
+    </ion-button>
+    <ion-input></ion-input>
+  </ion-content>
+</ng-container>

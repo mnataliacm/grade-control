@@ -1,0 +1,81 @@
+{
+  "studentsData": [
+    {
+      "id": "0",
+      "name": "Natalia",
+      "surname": "Castillo Muñoz",
+      "email": "natalia@email.com",
+      "picture": "https://cdn.onlinewebfonts.com/svg/img_508995.png",
+      "grade": "2 DAM"
+    },
+    {
+      "id": "1",
+      "name": "Francisco",
+      "surname": "González",
+      "email": "francisco@email.com",
+      "picture": "https://c.pxhere.com/photos/fa/a8/laugh_boy_young_people_young_pink_man_person_human-947184.jpg!d",
+      "grade": "2"
+    },
+    {
+      "id": "3",
+      "name": "lalatete",
+      "surname": "lala",
+      "email": "lala@email.com",
+      "picture": "",
+      "grade": "123"
+    },
+    {
+      "name": "123",
+      "surname": "123",
+      "email": "123",
+      "grade": "123",
+      "id": "5eMp_8i"
+    }
+  ],
+  "tasksData": [
+    {
+      "id": "0",
+      "moduleId": "0",
+      "name": "Unidad 1",
+      "type": "exam",
+      "info": ""
+    },
+    {
+      "id": "1",
+      "moduleId": "1",
+      "name": "Unidad 1",
+      "type": "classwork",
+      "info": ""
+    }
+  ],
+  "assignmentsData": [
+    {
+      "taskId": "0",
+      "dateTime": "'2022-02-12T11:30:00+01:00'"
+    }
+  ],
+  "1DAM": [
+    {
+      "moduleId": "0",
+      "name:": "Programación",
+      "acronyms": "PRO"
+    },
+    {
+      "moduleId": "1",
+      "name:": "Lenguaje de Marcas",
+      "acronyms": "LM"
+    }
+  ],
+  "2DAM": [
+    {
+      "moduleId": "0",
+      "name:": "Acceso a Datos",
+      "acronyms": "AD"
+    },
+    {
+      "moduleId": "1",
+      "name:": "Desarrollo de Interfaces",
+      "acronyms": "DI"
+    }
+  ]
+}
