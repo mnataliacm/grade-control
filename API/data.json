@@ -69,7 +69,12 @@
       "name:": "Administración de Sistemas Informáticos en Red",
       "acronyms": "ASIR"
     }
-  ],  
+  ], 
+  "SMR": [
+    {
+
+    }
+  ],
   "DAM": [
     {
       "id": "0",
@@ -94,6 +99,16 @@
       "grade": "2 DAM",
       "name:": "Desarrollo de Interfaces",
       "acronyms": "DI"
+    }
+  ],
+  "DAW": [
+    {
+
+    }
+  ],
+  "ASIR": [
+    {
+
     }
   ],
   "assignmentsData": [
