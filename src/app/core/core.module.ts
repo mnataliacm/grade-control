@@ -5,7 +5,7 @@ import { IonicModule } from '@ionic/angular';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { createTranslateLoader } from 'src/app/core/utils/translate';
-import { StudentComponent, StudentDetailComponent } from './components';
+import { GradeComponent } from './components';
 
 import es from '@angular/common/locales/es';
 import en from '@angular/common/locales/en';
@@ -15,8 +15,7 @@ registerLocaleData(es);
 @NgModule({
   declarations: 
   [
-    StudentComponent,
-    StudentDetailComponent,
+    GradeComponent,
 
 
   ],
@@ -44,9 +43,7 @@ registerLocaleData(es);
     ReactiveFormsModule,
     HttpClientModule,
     TranslateModule,
-    StudentComponent,
-    StudentDetailComponent,
-
+    GradeComponent,
 
   ],
   providers: [

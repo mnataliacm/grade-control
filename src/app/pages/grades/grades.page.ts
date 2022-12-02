@@ -1,15 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { GradeService } from 'src/app/core';
 
 @Component({
   selector: 'app-grades',
   templateUrl: './grades.page.html',
   styleUrls: ['./grades.page.scss'],
 })
-export class GradesPage implements OnInit {
+export class GradesPage {
 
-  constructor() { }
+  _grades: any;
 
-  ngOnInit() {
+  constructor(
+    private gradeSvc: GradeService,
+  ) { 
+    this._grades = [];
+  }
+
+  ionViewWillEnter() {
+    this.getAllGrades();
+  }
+
+  getAllGrades() {
+    this.gradeSvc.getListGrades().subscribe(response => {
+      console.log(response);
+      this._grades = response;
+    })
   }
 
 }

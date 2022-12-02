@@ -1,6 +1,5 @@
 export class GradeModel {
-  moduleId?: string;
-  studentId?: string;
-  exam?: [];
-  classwork?: [];
+  id?: string;
+  name?: string;
+  acronyms?: string;
 }

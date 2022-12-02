@@ -1,4 +1,4 @@
 export * from './student.service';
-export * from '.';
+export * from './grade.service';
 
 //export * from '.';

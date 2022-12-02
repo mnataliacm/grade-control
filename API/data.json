@@ -48,34 +48,58 @@
       "info": ""
     }
   ],
-  "assignmentsData": [
+  "gradesData": [
     {
-      "taskId": "0",
-      "dateTime": "'2022-02-12T11:30:00+01:00'"
+      "id": "0",
+      "name:": "Sistemas Microinformáticos y Redes",
+      "acronyms": "SMR"
+    },
+    {
+      "id": "1",
+      "name:": "Desarrollo de Aplicaciones Multiplataforma",
+      "acronyms": "DAM"
+    },
+    {
+      "id": "2",
+      "name:": "Desarrollo de Aplicaciones Web",
+      "acronyms": "DAW"
+    },
+    {
+      "id": "3",
+      "name:": "Administración de Sistemas Informáticos en Red",
+      "acronyms": "ASIR"
     }
-  ],
-  "1DAM": [
+  ],  
+  "DAM": [
     {
-      "moduleId": "0",
+      "id": "0",
+      "grade": "1 DAM",
       "name:": "Programación",
       "acronyms": "PRO"
     },
     {
-      "moduleId": "1",
+      "id": "1",
+      "grade": "1 DAM",
       "name:": "Lenguaje de Marcas",
       "acronyms": "LM"
-    }
-  ],
-  "2DAM": [
+    },
     {
-      "moduleId": "0",
+      "moduleId": "2",
+      "grade": "2 DAM",
       "name:": "Acceso a Datos",
       "acronyms": "AD"
     },
     {
-      "moduleId": "1",
+      "moduleId": "3",
+      "grade": "2 DAM",
       "name:": "Desarrollo de Interfaces",
       "acronyms": "DI"
+    }
+  ],
+  "assignmentsData": [
+    {
+      "taskId": "0",
+      "dateTime": "'2022-02-12T11:30:00+01:00'"
     }
   ]
 }
