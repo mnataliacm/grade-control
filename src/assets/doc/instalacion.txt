@@ -19,5 +19,24 @@ build/builder/styles linea 33
             "./node_modules/@fullcalendar/list/main.css"
 -------------------------------------------------------------------------------
 Creo carpetas
-Añado core module e index
+Añado carpetas e index
+/* copia seguridad limpia 1/12/22 */
+Instalo:
+Módulo Core
+Estudiantes funcionando
+##### Curso falla no muestra lista 
 
+
+
+
+
+-------------------------------------------------------------------------------
+grades = ["Sistemas Microinformáticos y Redes", "Desarrollo de Aplicaciones Multiplataforma", "Desarrollo de Aplicaciones Web", "Administración de Sistemas Informáticos en Red"];
+
+
+  studentId?: string;
+  exam?: [];
+  classwork?: [];
+  
+  
+  (onClick)="onClick1($event)" (onClick)="onClick2($event)"

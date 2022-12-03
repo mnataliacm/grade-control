@@ -14,8 +14,8 @@ export class SchedulePage implements OnInit {
 
   constructor(
     //private assignmentsService:AssignmentService,
-    private studentSvc:StudentService,
-    private tasksSvc:TaskService,
+    private studentSvc: StudentService,
+    private tasksSvc: TaskService,
     private containerRef: ViewContainerRef
   ) {
     // this.assignmentsService._assigns$.subscribe((tasks)=>{     
@@ -48,7 +48,7 @@ export class SchedulePage implements OnInit {
     //       var comp:ComponentRef<AssignmentScheduleComponent> = this.containerRef.createComponent(AssignmentScheduleComponent);
     //       comp.instance.assign = arg.event.extendedProps.assignment;
     //       return { domNodes: [comp.location.nativeElement] }
-          
+
     //     }
     //  };     
     //});
@@ -56,20 +56,36 @@ export class SchedulePage implements OnInit {
 
   public ngOnInit(): void {
     // HACK Rerender the calendar and correctly display it
-     setTimeout(() => {
-       this.calendarOptions.footerToolbar = false;
-     }, 300);
+    setTimeout(() => {
+      this.calendarOptions.footerToolbar = false;
+    }, 300);
   }
 
-   private initCalendar(): CalendarOptions {
+  private initCalendar(): CalendarOptions {
     return {
       initialView: 'timeGridWeek',
       height: 'auto',
-      slotDuration: '06:00:00',
+      slotDuration: '01:00:00',
       slotLabelInterval: '01:00',
-      editable:true,
+      editable: true,
+      slotMinTime: '08:00:00',
+      slotMaxTime: '16:00:00',
+      // eventLimit: true,
+      // weekend: false,
+      // columnFormat: 'dddd',
+      // header: {
+      //   	left: 'prev,next today',
+      //   	center: 'title',
+      //   	right: 'month,agendaWeek,agendaDay'
+      //   },
+    //   businessHours: {
+    //     daysOfWeek: [ 1, 2, 3, 4, 5 ],
+    // startTime: '08:00',
+    // endTime: '1:00',
+    //   },
+
       events: [
-    ],
+      ],
     };
   }
 
