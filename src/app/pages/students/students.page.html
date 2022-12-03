@@ -3,9 +3,7 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <div>
       <ion-title>{{ 'home.student' | translate | uppercase }}</ion-title>
-    </div>
   </ion-toolbar>
 </ion-header>
 
@@ -25,10 +23,10 @@
               <ion-icon name="ellipsis-vertical"></ion-icon>
             </ion-fab-button>
             <ion-fab-list>
-              <ion-fab-button fill="clear" color="success" color="success" routerLink='/edit-student/{{student.id}}'>
+              <ion-fab-button fill="clear" routerLink='/edit-student/{{student.id}}'>
                 <ion-icon name="pencil-outline"></ion-icon>
               </ion-fab-button>
-              <ion-fab-button fill="clear" color="danger"  color="danger" (click)="delete(student)">
+              <ion-fab-button fill="clear" (click)="delete(student)">
                 <ion-icon name="trash-outline"></ion-icon>
               </ion-fab-button>
             </ion-fab-list>

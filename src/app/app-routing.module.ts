@@ -50,6 +50,10 @@ const routes: Routes = [
   {
     path: 'edit-task/:id',
     loadChildren: () => import('./pages/components/edit-task/edit-task.module').then( m => m.EditTaskPageModule)
+  },
+  {
+    path: 'about',
+    loadChildren: () => import('./pages/about/about.module').then( m => m.AboutPageModule)
   }
 
 ];

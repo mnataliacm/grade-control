@@ -52,3 +52,8 @@ ion-fab-button::part(native):hover::after {
 ion-fab-button::part(native):active::after {
   background-color: #d4811a;
 }
+
+ion-button {
+  color: white;
+  --background: #d4811a;
+}

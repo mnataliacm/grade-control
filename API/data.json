@@ -93,7 +93,7 @@
     {
       "id": "0",
       "grade": "1 DAM",
-      "module": "0",
+      "module": "PRO",
       "name": "Unidad 1",
       "type": "exam",
       "info": ""
@@ -102,7 +102,7 @@
       "id": "1",
       "grade": "2 DAM",
       "module": "1",
-      "name": "Unidad 1",
+      "name": "Unidad 1,2",
       "type": "classwork",
       "info": "lalalalaal"
     }
