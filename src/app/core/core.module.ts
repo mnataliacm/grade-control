@@ -5,7 +5,7 @@ import { IonicModule } from '@ionic/angular';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { createTranslateLoader } from 'src/app/core/utils/translate';
-import { GradeComponent } from './components';
+import { GradeComponent, TaskComponent, TaskFormComponent } from './components';
 
 import es from '@angular/common/locales/es';
 import en from '@angular/common/locales/en';
@@ -16,7 +16,8 @@ registerLocaleData(es);
   declarations: 
   [
     GradeComponent,
-
+    TaskComponent,
+    TaskFormComponent,
 
   ],
   imports: 
@@ -44,6 +45,8 @@ registerLocaleData(es);
     HttpClientModule,
     TranslateModule,
     GradeComponent,
+    TaskComponent,
+    TaskFormComponent,
 
   ],
   providers: [

@@ -11,7 +11,7 @@
 
 <ion-content class="ion-padding">
   <ion-fab slot="fixed" vertical="top" horizontal="end" [edge]="true">
-    <ion-fab-button value="insertStudent" [routerLink]="['/create']">
+    <ion-fab-button value="0" [routerLink]="['/create']">
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
@@ -28,7 +28,7 @@
           <ion-card-subtitle>{{ student.surname }}, {{ student.name }}</ion-card-subtitle>
           <ion-card-subtitle>{{ student.email }}</ion-card-subtitle>
           <ion-card-content>
-            <ion-button value="modifyPerson" slot="start" color="none" routerLink='/edit/{{student.id}}'>
+            <ion-button value="modifyStudent" slot="start" color="none" routerLink='/edit/{{student.id}}'>
               <ion-icon name="pencil-outline" color="success"></ion-icon>
             </ion-button>
             <ion-button value="delete" slot="end" color="none" (click)="delete(student)">

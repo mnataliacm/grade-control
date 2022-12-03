@@ -30,6 +30,14 @@ const routes: Routes = [
   {
     path: 'grades',
     loadChildren: () => import('./pages/grades/grades.module').then( m => m.GradesPageModule)
+  },
+  {
+    path: 'tasks',
+    loadChildren: () => import('./pages/tasks/tasks.module').then( m => m.TasksPageModule)
+  },
+  {
+    path: 'schedule',
+    loadChildren: () => import('./pages/schedule/schedule.module').then( m => m.SchedulePageModule)
   }
 
 ];

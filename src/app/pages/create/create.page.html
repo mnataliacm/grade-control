@@ -1,37 +1,83 @@
-<!--  *ngIf="insertStudent"         *ngIf="HttpClient.get(header: studentsData)"          -->
+<!-- 
+  *ngIf="HttpClient.get(header: studentsData)" 
+  *ngIf="['insertStudent']"  
+  *ngIf="['insertTask']"
+  *ngSwitchCase="insertStudent"
 
+-->
+
+<div [ngSwitch]="value">
+
+<ng-container *ngIf="value === 'insertStudent'">
 <ion-header >
   <ion-toolbar color="tertiary" >
-    <ion-title>Create Person</ion-title>
+    <ion-title>{{ 'detail.titleS' | translate }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-  <ion-content class="ion-padding">
+  <ion-content class="ion-padding" *ngIf="['insertStudent']">
   <ion-item>
-    <ion-label>Name</ion-label>
-    <ion-input [(ngModel)]="student.name" placeholder="Enter Name"></ion-input>
+    <ion-label>{{ 'people.name' | translate }}</ion-label>
+    <ion-input [(ngModel)]="_students.name" placeholder="Enter Name"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label>Surnames</ion-label>
-    <ion-input [(ngModel)]="student.surname" placeholder="Enter Surnames"></ion-input>
+    <ion-label>{{ 'detail.surname' | translate }}</ion-label>
+    <ion-input [(ngModel)]="_students.surname" placeholder="Enter Surnames"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label>Email</ion-label>
-    <ion-input [(ngModel)]="student.email" placeholder="Enter Email"></ion-input>
+    <ion-label>{{ 'detail.email' | translate }}</ion-label>
+    <ion-input [(ngModel)]="_students.email" placeholder="Enter Email"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label>Picture</ion-label>
-    <ion-input [(ngModel)]="student.picture" placeholder="Enter picture"></ion-input>
+    <ion-label>{{ 'detail.image' | translate }}</ion-label>
+    <ion-input [(ngModel)]="_students.picture" placeholder="Enter picture"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label>Grade</ion-label>
-    <ion-input [(ngModel)]="student.grade" placeholder="Enter Grade"></ion-input>
+    <ion-label>{{ 'detail.grade' | translate }}</ion-label>
+    <ion-input [(ngModel)]="_students.grade" placeholder="Enter Grade"></ion-input>
   </ion-item>
   <ion-item>
     <ion-button (click)="submitFormStudent()">Add
     </ion-button>
     <ion-button [routerLink]="'/students'" color="danger" size="small">
-    Cancel
+      {{ 'button.cancel' | translate }}
     </ion-button>
   </ion-item>
   </ion-content>
+</ng-container>
+
+<ng-container *ngIf="value === 'insertTask'">
+  <ion-header >
+    <ion-toolbar color="tertiary" >
+      <ion-title>{{ 'detail.titleT' | translate }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+    <ion-content class="ion-padding">
+    <ion-item>
+      <ion-label>{{ 'people.name' | translate }}</ion-label>
+      <ion-input [(ngModel)]="_tasks.name" placeholder="Enter Name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{ 'detail.surname' | translate }}</ion-label>
+      <ion-input [(ngModel)]="_tasks.surname" placeholder="Enter Surnames"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{ 'detail.email' | translate }}</ion-label>
+      <ion-input [(ngModel)]="_tasks.email" placeholder="Enter Email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{ 'detail.image' | translate }}</ion-label>
+      <ion-input [(ngModel)]="_tasks.picture" placeholder="Enter picture"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-button (click)="submitFormTask()">Add
+      </ion-button>
+      <ion-button [routerLink]="'/students'" color="danger" size="small">
+      Cancel
+      </ion-button>
+    </ion-item>
+    </ion-content>
+  </ng-container>
+
+</div>

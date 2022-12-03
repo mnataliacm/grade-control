@@ -13,12 +13,14 @@
     "eng": "icono bandera reino unido"
   },
   "detail": {
-    "titleP": "Datos de los alumnos",
+    "titleS": "Datos de los alumnos",
     "titleT": "Datos de la tarea",
     "titleA": "Asignar fechas",
     "name": "Nombre",
     "surname": "Apellidos",
     "image": "Imagen",
+    "email": "Email",
+    "grade": "Curso",
     "warning": "Advertencia"
   },
   "people": {

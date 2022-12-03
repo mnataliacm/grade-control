@@ -1,5 +1,5 @@
 export class TaskModel {
-  taskId?: string;
+  id?: string;
   moduleId?: string;
   name?: string;
   type?: string;

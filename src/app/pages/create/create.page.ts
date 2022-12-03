@@ -1,6 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { StudentModel, StudentService } from 'src/app/core';
+import { AlertController } from '@ionic/angular';
+import { TranslateModule } from '@ngx-translate/core';
+import { lastValueFrom } from 'rxjs';
+import { StudentModel, StudentService, TaskModel } from 'src/app/core';
+import { TaskService } from 'src/app/core/services/task.service';
 
 @Component({
   selector: 'app-create',
@@ -8,37 +12,33 @@ import { StudentModel, StudentService } from 'src/app/core';
   styleUrls: ['./create.page.scss'],
 })
 export class CreatePage {
-[x: string]: any;
 
-  student: StudentModel;
-  //task: Task;
-  page: string | undefined;
+  _students: any;
+  _tasks: any;
+  value: string | undefined;
+
+  @Input() _task: any;
+  @Input() _student: any;
 
   constructor(
-    public studentSvc: StudentService,
-    //public tasksService: TasksService,
+    private studentSvc: StudentService,
+    public taskSvc: TaskService,
     public router: Router,
     public route: ActivatedRoute
   ) {
-    this.student = new StudentModel();
-    //this.task = new Task();
+    this._students = new StudentModel();
+    this._tasks = new TaskModel();
   }
-
-  // thisPageIs():boolean {
-  //   if (StudentModel) {
-  //     return true;
-  //   }
-  // }
 
   submitFormStudent() {
-    this.studentSvc.createStudent(this.student).subscribe((response) => {
-      this.router.navigate(['students']);
+    this.studentSvc.createStudent(this._students).subscribe((response) => {
+      this.router.navigate(['people']);
     });
   }
-  //   submitFormTask() {
-  //     this.tasksService.createTask(this.task).subscribe((response) => {
-  //       this.router.navigate(['tasks']);
-  //     });
-  // }
+    submitFormTask() {
+      this.taskSvc.createTask(this._tasks).subscribe((response) => {
+        this.router.navigate(['tasks']);
+      });
+  }
 
 }

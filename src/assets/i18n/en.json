@@ -13,11 +13,13 @@
     "eng": "united kingdom flag icon"
   },
   "detail": {
-    "titleP": "Studens data",
+    "titleS": "Studens data",
     "titleT": "Task data",
     "titleA": "Data assignment",
     "name": "Name",
     "surname": "Surname",
+    "email": "Email",
+    "grade": "Grade",
     "image": "Image",
     "warning": "Warning"
   },
