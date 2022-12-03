@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
 import { lastValueFrom } from 'rxjs';
@@ -12,13 +12,6 @@ import { StudentService } from 'src/app/core/services';
 export class StudentsPage {
 
   _students: any;
-  page: string | undefined;
-
-  @Output() onEdit = new EventEmitter;
-
-  onEditClick(){
-    this.onEdit.emit("insertStudent");
-  }
 
   constructor(
     private studentSvc: StudentService,
@@ -63,4 +56,5 @@ export class StudentsPage {
     await alert.present();
     const { role } = await alert.onDidDismiss();
   }
+
 }

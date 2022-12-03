@@ -18,9 +18,12 @@
     "titleA": "Data assignment",
     "name": "Name",
     "surname": "Surname",
+    "image": "Image",
     "email": "Email",
     "grade": "Grade",
-    "image": "Image",
+    "module": "Module",
+    "type": "Task",
+    "info": "Information",
     "warning": "Warning"
   },
   "people": {

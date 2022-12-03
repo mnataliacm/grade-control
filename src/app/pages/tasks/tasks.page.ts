@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
 import { lastValueFrom } from 'rxjs';
@@ -13,14 +13,7 @@ import { isLowResolution as lowres} from 'src/app/utils/screen.utils';
 export class TasksPage {
 
   _tasks: any;
-  page: string | undefined;
   isLowResolution = lowres;
-
-  @Output() onEdit = new EventEmitter;
-
-  onEditClick(){
-    this.onEdit.emit("insertTask");
-  }
 
   constructor(
     private taskSvc: TaskService,

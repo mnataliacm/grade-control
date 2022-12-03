@@ -11,14 +11,29 @@
 
 <ion-content class="ion-padding">
   <ion-fab slot="fixed" vertical="top" horizontal="end" [edge]="true">
-    <ion-fab-button value="0" [routerLink]="['/create']">
+    <ion-fab-button value="newStudent" [routerLink]="['/new-student']" >
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
   <ion-grid>
     <ion-row>
-      <ion-col sizeXs="10" sizeXl="3" *ngFor="let student of _students">      
-        <ion-card>    
+      <ion-col sizeXs="10" sizeXl="3" *ngFor="let student of _students"> 
+        <ion-card> 
+          <ion-content>
+             <ion-fab vertical="top" horizontal="end" slot="fixed">
+            <ion-fab-button color="light" size="small">
+              <ion-icon name="ellipsis-vertical"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-list>
+              <ion-fab-button fill="clear" color="success" color="success" routerLink='/edit-student/{{student.id}}'>
+                <ion-icon name="pencil-outline"></ion-icon>
+              </ion-fab-button>
+              <ion-fab-button fill="clear" color="danger"  color="danger" (click)="delete(student)">
+                <ion-icon name="trash-outline"></ion-icon>
+              </ion-fab-button>
+            </ion-fab-list>
+          </ion-fab>
+          </ion-content>
           <ion-avatar>
             <img *ngIf="!student.picture" alt="Silhouette of a person's head"
               src="https://ionicframework.com/docs/img/demos/avatar.svg" />
@@ -28,12 +43,7 @@
           <ion-card-subtitle>{{ student.surname }}, {{ student.name }}</ion-card-subtitle>
           <ion-card-subtitle>{{ student.email }}</ion-card-subtitle>
           <ion-card-content>
-            <ion-button value="modifyStudent" slot="start" color="none" routerLink='/edit/{{student.id}}'>
-              <ion-icon name="pencil-outline" color="success"></ion-icon>
-            </ion-button>
-            <ion-button value="delete" slot="end" color="none" (click)="delete(student)">
-              <ion-icon name="trash" color="danger"></ion-icon>
-            </ion-button>
+            notas .... pendiente
           </ion-card-content>
         </ion-card>
       </ion-col>

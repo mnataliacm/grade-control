@@ -1,0 +1,37 @@
+<ng-container >
+  <ion-header>
+    <ion-toolbar >
+      <ion-title>{{ 'detail.titleT' | translate }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding">
+    <ion-item>
+      <ion-label>{{ 'detail.grade' | translate }}</ion-label>
+      <ion-input [(ngModel)]="task.grade"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{ 'detail.module' | translate }}</ion-label>
+      <ion-input [(ngModel)]="task.module"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{ 'detail.name' | translate }}</ion-label>
+      <ion-input [(ngModel)]="task.name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{ 'detail.type' | translate }}</ion-label>
+      <ion-input [(ngModel)]="task.type"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{ 'detail.info' | translate }}</ion-label>
+      <ion-input [(ngModel)]="task.info"></ion-input>
+    </ion-item>
+    <ion-button (click)="updateTask()" color="success" size="small">
+      {{ 'button.edit' | translate }}
+    </ion-button>
+    <ion-button [routerLink]="'/tasks'" color="danger" size="small">
+      {{ 'button.cancel' | translate }}
+    </ion-button>
+    <ion-input></ion-input>
+  </ion-content>
+</ng-container>

@@ -9,31 +9,31 @@ import { StudentService } from '../../services';
 })
 export class StudentComponent  {
 
-  student: any;
-  page: string;
+  // student: any;
+  // page: string;
 
-  constructor(
-    private studentSvc: StudentService,
-    ) {
-      this.student = [];
-      this.page = "Student";
-  }
+  // constructor(
+  //   private studentSvc: StudentService,
+  //   ) {
+  //     this.student = [];
+  //     this.page = "student";
+  // }
  
-  ionViewWillEnter() {
-    this.getAllStudent();
-  }
+  // ionViewWillEnter() {
+  //   this.getAllStudent();
+  // }
 
-  getAllStudent() {
-    this.studentSvc.getListStudent().subscribe(response => {
-      console.log(response);
-      this.student = response;
-    })
-  }
+  // getAllStudent() {
+  //   this.studentSvc.getListStudent().subscribe(response => {
+  //     console.log(response);
+  //     this.student = response;
+  //   })
+  // }
 
-  delete(item: { id: string; }) {
-    this.studentSvc.deleteStudent(item.id).subscribe(Response => {
-      this.getAllStudent();
-    });
-  }
+  // delete(item: { id: string; }) {
+  //   this.studentSvc.deleteStudent(item.id).subscribe(Response => {
+  //     this.getAllStudent();
+  //   });
+  // }
 
 }

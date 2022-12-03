@@ -9,6 +9,7 @@ import { GradeComponent, TaskComponent, TaskFormComponent } from './components';
 
 import es from '@angular/common/locales/es';
 import en from '@angular/common/locales/en';
+import { StudentComponent } from './components/student/student.component';
 registerLocaleData(en);
 registerLocaleData(es);
 
@@ -18,6 +19,7 @@ registerLocaleData(es);
     GradeComponent,
     TaskComponent,
     TaskFormComponent,
+    StudentComponent,
 
   ],
   imports: 
@@ -47,6 +49,7 @@ registerLocaleData(es);
     GradeComponent,
     TaskComponent,
     TaskFormComponent,
+    StudentComponent,
 
   ],
   providers: [

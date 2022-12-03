@@ -21,6 +21,9 @@
     "image": "Imagen",
     "email": "Email",
     "grade": "Curso",
+    "module": "Modulo",
+    "type": "Tarea",
+    "info": "Información",
     "warning": "Advertencia"
   },
   "people": {

@@ -11,7 +11,7 @@
 
 <ion-content class="ion-padding">
   <ion-fab slot="fixed" vertical="top" horizontal="end" [edge]="true">
-    <ion-fab-button value="1" [routerLink]="['/create']">
+    <ion-fab-button value="newTask" [routerLink]="['/new-task']">
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
@@ -21,7 +21,7 @@
         <ion-label>{{task.moduleId}} <br> {{task.name}} <br> {{task.type}} <br> {{task.info}}</ion-label>
     
         <ion-icon name="swap-horizontal" *ngIf="isLowResolution()"></ion-icon>
-        <ion-button class="item-expanded" *ngIf="!isLowResolution()" slot="end" fill="clear" routerLink='/edit/{{task.id}}'>
+        <ion-button class="item-expanded" *ngIf="!isLowResolution()" slot="end" fill="clear" routerLink='/edit-task/{{task.id}}' >
           <div class="vertical">
             <ion-icon name="pencil"></ion-icon>
             {{ 'button.edit' | translate }}
@@ -35,7 +35,7 @@
         </ion-button>
       </ion-item>
       <ion-item-options>
-        <ion-item-option routerLink='/edit/{{task.id}}' color="light">
+        <ion-item-option routerLink='/edit-task/{{task.id}}' color="light" >
           <ion-icon slot="top" name="pencil-outline" color="success"></ion-icon>
         </ion-item-option>
         <ion-item-option (click)="delete(task)" color="light">
@@ -45,11 +45,3 @@
     </ion-item-sliding>
   </ion-list>
 </ion-content> 
-
-
-<!-- (onEdit)="onEditTask($event)" 
-        (onDelete)="onDeleteTask($event)"  
-      *ngFor="let task of _tasks"
- <app-task  [task]="task"></app-task>
-
-      -->

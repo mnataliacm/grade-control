@@ -16,18 +16,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/students/students.module').then( m => m.StudentsPageModule)
   },
   {
-    path: 'create',
-    loadChildren: () => import('./pages/create/create.module').then( m => m.CreatePageModule)
-  },
-  {
-    path: 'edit',
-    loadChildren: () => import('./pages/edit/edit.module').then( m => m.EditPageModule)
-  },
-  {
-    path: 'edit/:id',
-    loadChildren: () => import('./pages/edit/edit.module').then( m => m.EditPageModule)
-  },
-  {
     path: 'grades',
     loadChildren: () => import('./pages/grades/grades.module').then( m => m.GradesPageModule)
   },
@@ -38,6 +26,30 @@ const routes: Routes = [
   {
     path: 'schedule',
     loadChildren: () => import('./pages/schedule/schedule.module').then( m => m.SchedulePageModule)
+  },
+  {
+    path: 'new-student',
+    loadChildren: () => import('./pages/components/new-student/new-student.module').then( m => m.NewStudentPageModule)
+  },
+  {
+    path: 'new-task',
+    loadChildren: () => import('./pages/components/new-task/new-task.module').then( m => m.NewTaskPageModule)
+  },
+  {
+    path: 'edit-student',
+    loadChildren: () => import('./pages/components/edit-student/edit-student.module').then( m => m.EditStudentPageModule)
+  },
+  {
+    path: 'edit-student/:id',
+    loadChildren: () => import('./pages/components/edit-student/edit-student.module').then( m => m.EditStudentPageModule)
+  },
+  {
+    path: 'edit-task',
+    loadChildren: () => import('./pages/components/edit-task/edit-task.module').then( m => m.EditTaskPageModule)
+  },
+  {
+    path: 'edit-task/:id',
+    loadChildren: () => import('./pages/components/edit-task/edit-task.module').then( m => m.EditTaskPageModule)
   }
 
 ];

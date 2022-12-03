@@ -1,38 +1,36 @@
-<!--  -->
-
-<ng-container *ngIf="student">
+<ng-container >
   <ion-header>
-    <ion-toolbar color="tertiary">
-      <ion-title>Edit Person</ion-title>
+    <ion-toolbar >
+      <ion-title>{{ 'detail.titleS' | translate }}</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-content class="ion-padding">
     <ion-item>
-      <ion-label>Name</ion-label>
+      <ion-label>{{ 'detail.name' | translate }}</ion-label>
       <ion-input [(ngModel)]="student.name"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Surname</ion-label>
+      <ion-label>{{ 'detail.surname' | translate }}</ion-label>
       <ion-input [(ngModel)]="student.surname"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Email</ion-label>
+      <ion-label>{{ 'detail.email' | translate }}</ion-label>
       <ion-input [(ngModel)]="student.email"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Picture</ion-label>
+      <ion-label>{{ 'detail.image' | translate }}</ion-label>
       <ion-input [(ngModel)]="student.picture"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Grade</ion-label>
+      <ion-label>{{ 'detail.grade' | translate }}</ion-label>
       <ion-input [(ngModel)]="student.grade"></ion-input>
     </ion-item>
     <ion-button (click)="updateStudent()" color="success" size="small">
-      Update
+      {{ 'button.edit' | translate }}
     </ion-button>
     <ion-button [routerLink]="'/students'" color="danger" size="small">
-      Cancel
+      {{ 'button.cancel' | translate }}
     </ion-button>
     <ion-input></ion-input>
   </ion-content>

@@ -28,24 +28,8 @@
       "name": "123",
       "surname": "123",
       "email": "123",
-      "grade": "123",
+      "grade": "DAW",
       "id": "5eMp_8i"
-    }
-  ],
-  "tasksData": [
-    {
-      "id": "0",
-      "moduleId": "0",
-      "name": "Unidad 1",
-      "type": "exam",
-      "info": ""
-    },
-    {
-      "id": "1",
-      "moduleId": "1",
-      "name": "Unidad 1",
-      "type": "classwork",
-      "info": ""
     }
   ],
   "gradesData": [
@@ -69,11 +53,9 @@
       "name:": "Administración de Sistemas Informáticos en Red",
       "acronyms": "ASIR"
     }
-  ], 
+  ],
   "SMR": [
-    {
-
-    }
+    {}
   ],
   "DAM": [
     {
@@ -102,13 +84,27 @@
     }
   ],
   "DAW": [
-    {
-
-    }
+    {}
   ],
   "ASIR": [
+    {}
+  ],
+  "tasksData": [
     {
-
+      "id": "0",
+      "grade": "1 DAM",
+      "module": "0",
+      "name": "Unidad 1",
+      "type": "exam",
+      "info": ""
+    },
+    {
+      "id": "1",
+      "grade": "2 DAM",
+      "module": "1",
+      "name": "Unidad 1",
+      "type": "classwork",
+      "info": "lalalalaal"
     }
   ],
   "assignmentsData": [

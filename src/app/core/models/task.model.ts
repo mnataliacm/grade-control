@@ -1,6 +1,7 @@
 export class TaskModel {
   id?: string;
-  moduleId?: string;
+  grade?: string;
+  module?: string;
   name?: string;
   type?: string;
   info?: string;
