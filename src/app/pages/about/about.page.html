@@ -7,39 +7,41 @@
   </ion-toolbar>
 </ion-header>
 
+<ion-content>
 <ion-content class="app ion-padding">
-  <h1>Grade Control</h1> 
-  <h3>Aplicación para calcular los boletines de notas.</h3>
-  <p>* Introduce los alumnos de la clase.</p>
-  <p>* Introduce las tareas a realizar.</p>
-  <p>* Asigna fechas a las tareas y puntualas.</p>
-  <p></p>
+  <h1>Grade Control</h1>
+  <h3>{{ 'app.line1' | translate }}</h3>
+  <p>{{ 'app.line2' | translate }}</p>
+  <p>{{ 'app.line3' | translate }}</p>
+  <br><br><br><br><br>
+  <h2>{{ 'about.line1' | translate }}</h2>
+  <h3>{{ 'about.line2' | translate }}</h3>
+  <p>{{ 'about.line3' | translate }}</p>
+  <p>{{ 'about.line4' | translate }}</p>
+  <p>{{ 'about.line5' | translate }}</p>
 </ion-content>
-
-<ion-content class="fp ion-padding" >
-  <h2>2 DAM - Modulos: Acceso a Datos y Hora de Libre Configuración</h2>
-  <h3>Proyecto realizado con Ionic y Angular</h3>
-  <h5>Implementaciones:</h5>
-  <p>- CoreModule</p>
-  <p>- Indice</p>
-  <p>- Fullcalendar</p>
-  <p>- Traduccion español-ingles</p>
-  <p>- APIrest json-server</p>
-  <p>- </p> 
-
 </ion-content>
-
 <ion-footer>
   <ion-row>
-    <ion-col>
+    <ion-col sizeXl="3" sizeXs="12">
       C.P.I.F.P. - Tech Park Málaga
     </ion-col>
-    <ion-col>
-      <ion-title>Aplicación desarrollada por Natalia Castillo</ion-title>
+    <ion-col sizeXl="3" sizeXs="12">
+      <a href="https://github.com/mnataliacm">
+        <ion-icon name="logo-github"></ion-icon>
+      </a>
+      <a href="https://www.linkedin.com/in/natalia-castillo-muñoz-87714423">
+        <ion-icon name="logo-linkedin"></ion-icon>
+      </a>
     </ion-col>
-    <ion-col>
-      <ion-icon name="logo-github"></ion-icon>   
-      <ion-icon name="logo-linkedin"></ion-icon>
+    <ion-col sizeXl="6" sizeXs="12">
+      <ion-title>{{ 'footer.grade' | translate}}</ion-title>
     </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col sizeXl="9" sizeXs="12">
+      <ion-label>{{ 'footer.author' | translate}}</ion-label>
+    </ion-col>
+    <ion-col></ion-col>
   </ion-row>
 </ion-footer>

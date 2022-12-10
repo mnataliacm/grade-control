@@ -57,5 +57,19 @@
     "close": "Close",
     "cancel": "Cancel",
     "apply": "Apply"
+  },
+  "app": {
+    "line1": "Application to calculate report cards",
+    "line2": "* Introduce students",
+    "line3": "* Enter practices or exams"
+  },
+  "about": {
+    "line1": "Practice for 2 DAM - Modules: Data Access and HLC",
+    "line2": "Application developed by Natalia Castillo Muñoz",
+    "line3": "Project carried out with Ionic and Angular"
+  },
+  "footer": {
+    "grade": "2º Cross-Platform Application Development",
+    "author": "By Natalia Castillo"
   }
 }
