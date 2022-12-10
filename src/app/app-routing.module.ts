@@ -28,19 +28,11 @@ const routes: Routes = [
     loadChildren: () => import('./pages/schedule/schedule.module').then( m => m.SchedulePageModule)
   },
   {
-    path: 'new-student',
-    loadChildren: () => import('./pages/components/new-student/new-student.module').then( m => m.NewStudentPageModule)
-  },
-  {
     path: 'new-task',
     loadChildren: () => import('./pages/components/new-task/new-task.module').then( m => m.NewTaskPageModule)
   },
   {
     path: 'edit-student',
-    loadChildren: () => import('./pages/components/edit-student/edit-student.module').then( m => m.EditStudentPageModule)
-  },
-  {
-    path: 'edit-student/:id',
     loadChildren: () => import('./pages/components/edit-student/edit-student.module').then( m => m.EditStudentPageModule)
   },
   {
@@ -54,8 +46,11 @@ const routes: Routes = [
   {
     path: 'about',
     loadChildren: () => import('./pages/about/about.module').then( m => m.AboutPageModule)
+  },
+  {
+    path: 'modules',
+    loadChildren: () => import('./pages/modules/modules.module').then( m => m.ModulesPageModule)
   }
-
 ];
 
 @NgModule({

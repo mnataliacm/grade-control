@@ -1,6 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
+import { IonItemSliding, ModalController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
-import { GradeService } from 'src/app/core';
+import { Observable, observable } from 'rxjs';
+import { GradeModel, GradeService, ProfileComponent } from 'src/app/core';
+import { isLowResolution as lowres} from 'src/app/utils/screen.utils';
 
 @Component({
   selector: 'app-grades',
@@ -10,11 +13,15 @@ import { GradeService } from 'src/app/core';
 export class GradesPage {
 
   _grades: any;
+  @Output() grades = this.getAllGrades
+  isLowResolution:()=>boolean = lowres;
 
   constructor(
+    private modal: ModalController,
     private gradeSvc: GradeService,
+    private translate: TranslateService
   ) { 
-    this._grades = [];
+    
   }
 
   ionViewWillEnter() {
@@ -28,4 +35,25 @@ export class GradesPage {
     })
   }
 
+  onClick1(slide:IonItemSliding, grade: GradeModel){
+    this.presentModules(grade);
+    slide.close();
+  }
+
+  onClick2(slide:IonItemSliding, grade: GradeModel){
+    this.presentModules(grade);
+    slide.close();
+  }
+
+  async presentModules(grade: GradeModel) {
+    const modal = await this.modal.create({
+      component: ProfileComponent,
+      componentProps: {
+        grade: grade
+      }
+    });
+
+    modal.present();
+    
+  }
 }

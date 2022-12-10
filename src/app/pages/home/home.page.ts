@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { isLowResolution as lowres} from 'src/app/utils/screen.utils';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+
+  isLowResolution:()=>boolean = lowres;
 
   constructor() {}
 

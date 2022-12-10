@@ -3,44 +3,51 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-      <ion-title>{{ 'home.student' | translate | uppercase }}</ion-title>
+    <ion-title>{{ 'home.student' | translate | uppercase }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
   <ion-fab slot="fixed" vertical="top" horizontal="end" [edge]="true">
-    <ion-fab-button value="newStudent" [routerLink]="['/new-student']" >
+    <ion-fab-button value="newStudent" [routerLink]="['/edit-student/']">
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
   <ion-grid>
     <ion-row>
-      <ion-col sizeXs="10" sizeXl="3" *ngFor="let student of _students"> 
-        <ion-card> 
+      <ion-col sizeXs="10" sizeXl="3" *ngFor="let student of _students">
+        <ion-card>
           <ion-content>
-             <ion-fab vertical="top" horizontal="end" slot="fixed">
-            <ion-fab-button color="light" size="small">
-              <ion-icon name="ellipsis-vertical"></ion-icon>
-            </ion-fab-button>
-            <ion-fab-list>
-              <ion-fab-button fill="clear" routerLink='/edit-student/{{student.id}}'>
-                <ion-icon name="pencil-outline"></ion-icon>
+            <ion-fab vertical="top" horizontal="end" slot="fixed">
+              <ion-fab-button color="light" size="small">
+                <ion-icon name="ellipsis-vertical"></ion-icon>
               </ion-fab-button>
-              <ion-fab-button fill="clear" (click)="delete(student)">
-                <ion-icon name="trash-outline"></ion-icon>
-              </ion-fab-button>
-            </ion-fab-list>
-          </ion-fab>
+              <ion-fab-list>
+                <ion-fab-button fill="clear" (click)="toPerfil(student.id)">
+                  <ion-icon name="person-circle-outline"></ion-icon>
+                </ion-fab-button>
+                <ion-fab-button fill="clear" routerLink='/edit-student/{{student.id}}'>
+                  <ion-icon name="pencil-outline"></ion-icon>
+                </ion-fab-button>
+                <ion-fab-button fill="clear" (click)="delete(student)">
+                  <ion-icon name="trash-outline"></ion-icon>
+                </ion-fab-button>
+              </ion-fab-list>
+            </ion-fab>
           </ion-content>
-          <ion-avatar>
-            <img *ngIf="!student.picture" alt="Silhouette of a person's head"
-              src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-            <img *ngIf="student.picture" alt="Person picture" [src]="student.picture" />
-          </ion-avatar>
-          <ion-card-title>{{ student.grade }}</ion-card-title>
-          <ion-card-subtitle>{{ student.surname }}, {{ student.name }}</ion-card-subtitle>
-          <ion-card-subtitle>{{ student.email }}</ion-card-subtitle>
+          <ion-card-header>
+            <ion-avatar>
+              <ion-img *ngIf="!student.picture" alt="Silhouette of a person's head"
+                src="https://ionicframework.com/docs/img/demos/avatar.svg"></ion-img>
+              <ion-img *ngIf="student.picture" alt="Person picture" [src]="student.picture"></ion-img>
+            </ion-avatar>
+
+            <ion-card-title>{{ student.surname }}, {{ student.name }}</ion-card-title>
+            <ion-card-subtitle>{{ student.email }}</ion-card-subtitle>
+          </ion-card-header>
+
           <ion-card-content>
+            <ion-card-title>{{ student.grade }}</ion-card-title>
             notas .... pendiente
           </ion-card-content>
         </ion-card>

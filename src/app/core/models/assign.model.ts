@@ -1,4 +1,6 @@
 export class AssignModel {
-  moduleId?: string;
+  id?: string;
+  taskId?: string;
   dateTime?: string;
 }
+

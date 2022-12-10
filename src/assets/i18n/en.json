@@ -6,6 +6,7 @@
     "student": "Students",
     "tasks": "Tasks",
     "assign": "Assign dates",
+    "modules": "Modules",
     "calendar": "Schedule",
     "info": "About",
     "language": "Change language: ",
@@ -21,10 +22,12 @@
     "image": "Image",
     "email": "Email",
     "grade": "Grade",
+    "level": "Level",
     "module": "Module",
     "type": "Task",
     "info": "Information",
-    "warning": "Warning"
+    "warning": "Warning",
+    "date": "Date"
   },
   "people": {
     "name": "Enter the name ...",

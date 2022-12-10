@@ -1,26 +1,24 @@
-import { LOCALE_ID, NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { CommonModule, registerLocaleData } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { createTranslateLoader } from 'src/app/core/utils/translate';
-import { GradeComponent, TaskComponent, TaskFormComponent } from './components';
-
 import es from '@angular/common/locales/es';
 import en from '@angular/common/locales/en';
-import { StudentComponent } from './components/student/student.component';
+import { DateTimeSelectComponent } from './components/date-time-select/date-time-select.component';
+import { GradeSelectComponent, ProfileComponent } from './components';
+
 registerLocaleData(en);
 registerLocaleData(es);
 
 @NgModule({
   declarations: 
   [
-    GradeComponent,
-    TaskComponent,
-    TaskFormComponent,
-    StudentComponent,
-
+    DateTimeSelectComponent,
+    ProfileComponent,
+    GradeSelectComponent,
   ],
   imports: 
   [
@@ -36,6 +34,7 @@ registerLocaleData(es);
       deps: [HttpClient]
       }
     }),
+    
 
   ],
   exports: 
@@ -46,23 +45,16 @@ registerLocaleData(es);
     ReactiveFormsModule,
     HttpClientModule,
     TranslateModule,
-    GradeComponent,
-    TaskComponent,
-    TaskFormComponent,
-    StudentComponent,
-
+    DateTimeSelectComponent,
+    ProfileComponent,
+    GradeSelectComponent,
   ],
   providers: [
   {
     provide: LOCALE_ID,
     useValue: 'es'
   },
-],
-schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+]
 })
 
 export class CoreModule { }
-
-/*
-
-*/

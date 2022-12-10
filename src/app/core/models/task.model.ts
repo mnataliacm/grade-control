@@ -5,4 +5,5 @@ export class TaskModel {
   name?: string;
   type?: string;
   info?: string;
+  date?:string;
 }

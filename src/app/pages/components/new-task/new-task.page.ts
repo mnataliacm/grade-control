@@ -25,4 +25,10 @@ export class NewTaskPage {
       });
   }
 
+  onTaskDateTime(event:any, task:TaskModel){
+    task.date = event;
+    this.taskSvc.updateTask(task.id, task);
+    console.log(event);
+  }
+
 }

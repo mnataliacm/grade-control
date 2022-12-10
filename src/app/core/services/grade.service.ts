@@ -6,6 +6,7 @@ import { GradeModel } from '../models';
 @Injectable({
   providedIn: 'root'
 })
+
 export class GradeService {
 
   base_path = 'http://localhost:3000/gradesData';
@@ -31,7 +32,6 @@ export class GradeService {
     return throwError(
       'Something bad happened; please try again later.');
   };
-
 
   createGrade(grade: any): Observable<GradeModel> {
     return this.http
@@ -77,4 +77,5 @@ export class GradeService {
         catchError(this.handleError)
       )
   }
+  
 }

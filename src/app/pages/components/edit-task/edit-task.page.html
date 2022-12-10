@@ -26,6 +26,10 @@
       <ion-label>{{ 'detail.info' | translate }}</ion-label>
       <ion-input [(ngModel)]="task.info"></ion-input>
     </ion-item>
+    <ion-item>
+      <ion-label>{{ 'detail.date' | translate }}</ion-label>
+      <ion-input [(ngModel)]="task.date"></ion-input>
+    </ion-item>
     <ion-button (click)="updateTask()" color="success" size="small">
       {{ 'button.edit' | translate }}
     </ion-button>
@@ -35,3 +39,4 @@
     <ion-input></ion-input>
   </ion-content>
 </ng-container>
+

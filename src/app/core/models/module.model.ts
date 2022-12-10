@@ -1,5 +1,8 @@
 export class ModuleModel {
-  moduleId?: string;
+  id?: string;
+  gradiId?: string;
   name?: string;
-  acronyms?: string;
+  acronym?: string;
+  classwork?: [];
+  exam?: [];
 }

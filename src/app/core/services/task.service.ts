@@ -62,7 +62,7 @@ export class TaskService {
       )
   }
 
-  updateTask(id: string, task: any): Observable<TaskModel> {
+  updateTask(id: string|undefined, task: TaskModel): Observable<TaskModel> {
     return this.http
       .put<TaskModel>(this.base_path + '/' + id, JSON.stringify(task), this.httpOptions)
       .pipe(

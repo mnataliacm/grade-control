@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { StudentModel, StudentService } from 'src/app/core';
+import { StudentService } from 'src/app/core';
+
 
 @Component({
   selector: 'app-edit-student',
@@ -9,29 +11,52 @@ import { StudentModel, StudentService } from 'src/app/core';
 })
 export class EditStudentPage implements OnInit {
 
-  id: any;
-  student: any;
+  form:FormGroup;
 
   constructor(
-    public route: ActivatedRoute,
-    public router: Router,
-    public studentsSvc: StudentService,
+    private formBuilder:FormBuilder,
+    private route: ActivatedRoute,
+    private router: Router,
+    private studentsSvc: StudentService,
   ) { 
-    this.student = new StudentModel();
+    this.form = this.formBuilder.group({
+      id:[""],
+      name:["", Validators.required],
+      surname:["", Validators.required],
+      email:["", [Validators.required, Validators.email]],
+      picture:[""],
+      grade:[""],
+      level:[""],
+    });
   }
 
   ngOnInit() {
-    this.id = this.route.snapshot.params['id'];
-    this.studentsSvc.getStudent(this.id).subscribe(response => {
-      console.log(response);
-      this.student = response;
-    })
+    var id = this.route.snapshot.params['id'];
+    this.form.controls['id'].setValue(id);
+    if(id!="-1")
+      this.studentsSvc.getStudent(id).subscribe(response => {
+        console.log(response);
+        this.form.controls['name'].setValue(response.name);
+        this.form.controls['surname'].setValue(response.surname);
+        this.form.controls['email'].setValue(response.email);
+        this.form.controls['picture'].setValue(response.picture);
+        this.form.controls['grade'].setValue(response.grade);
+        this.form.controls['level'].setValue(response.level);
+      });
   }
 
-  updateStudent() {
-    this.studentsSvc.updateStudent(this.id, this.student).subscribe(response => {
-      this.router.navigate(['students']);
-    })
+  onSubmit(){
+    var student = this.form.value;
+    if(student.id!="-1")
+      this.studentsSvc.updateStudent(student.id, student);
+    else
+      this.studentsSvc.createStudent(student).subscribe(
+        {next:(data)=>{
+          this.router.navigate(['students']);
+        },error:err=>{
+          console.log(err);
+        }}
+      );
   }
 
 }

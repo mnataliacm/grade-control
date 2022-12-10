@@ -6,7 +6,10 @@
       "surname": "Castillo Muñoz",
       "email": "natalia@email.com",
       "picture": "https://cdn.onlinewebfonts.com/svg/img_508995.png",
-      "grade": "2 DAM"
+      "grade": "DAM",
+      "level": "2º",
+      "classwork": [],
+      "exam": []
     },
     {
       "id": "1",
@@ -14,103 +17,281 @@
       "surname": "González",
       "email": "francisco@email.com",
       "picture": "https://c.pxhere.com/photos/fa/a8/laugh_boy_young_people_young_pink_man_person_human-947184.jpg!d",
-      "grade": "2"
+      "grade": "2",
+      "level": "2º",
+      "classwork": [],
+      "exam": []
     },
     {
-      "id": "3",
+      "id": "2",
       "name": "lalatete",
       "surname": "lala",
       "email": "lala@email.com",
       "picture": "",
-      "grade": "123"
+      "grade": "123",
+      "level": "2º",
+      "classwork": [],
+      "exam": []
     },
     {
-      "name": "123",
+      "name": "3",
       "surname": "123",
       "email": "123",
       "grade": "DAW",
-      "id": "5eMp_8i"
+      "level": "2º",
+      "id": "5eMp_8i",
+      "classwork": [],
+      "exam": []
+    },
+    {
+      "id": "4",
+      "name": "qwerqwerqw",
+      "surname": "qwerqweer",
+      "email": "qwrqw@gmail.com",
+      "picture": "asfdsaf",
+      "grade": "safsadfsa",
+      "level": "2º",
+      "classwork": [],
+      "exam": []
     }
   ],
   "gradesData": [
     {
       "id": "0",
-      "name:": "Sistemas Microinformáticos y Redes",
-      "acronyms": "SMR"
+      "name": "Sistemas Microinformáticos y Redes",
+      "acronym": "SMR",
+      "first": [
+        {
+          "module": "Redes de Área Local",
+          "acronym": "REDL"
+        },
+        {
+          "module": "Aplicaciones Ofimáticas",
+          "acronym": "AOF"
+        }
+      ],
+      "second": [
+        {
+          "module": "Seguridad Informática",
+          "acronym": "SI"
+        },
+        {
+          "module": "Sistemas Operativos en Red",
+          "acronym": "SOM"
+        }
+      ]
     },
     {
       "id": "1",
-      "name:": "Desarrollo de Aplicaciones Multiplataforma",
-      "acronyms": "DAM"
+      "name": "Desarrollo de Aplicaciones Multiplataforma",
+      "acronym": "DAM",
+      "first": [
+        {
+          "module": "",
+          "acronym": ""
+        }
+      ],
+      "second": [
+        {
+          "module": "",
+          "acronym": ""
+        }
+      ]
     },
     {
       "id": "2",
-      "name:": "Desarrollo de Aplicaciones Web",
-      "acronyms": "DAW"
+      "name": "Desarrollo de Aplicaciones Web",
+      "acronym": "DAW",
+      "first": [
+        {
+          "module": "",
+          "acronym": ""
+        }
+      ],
+      "second": [
+        {
+          "module": "",
+          "acronym": ""
+        }
+      ]
     },
     {
       "id": "3",
-      "name:": "Administración de Sistemas Informáticos en Red",
-      "acronyms": "ASIR"
+      "name": "Administración de Sistemas Informáticos en Red",
+      "acronym": "ASIR",
+      "first": [
+        {
+          "module": "",
+          "acronym": ""
+        }
+      ],
+      "second": [
+        {
+          "module": "",
+          "acronym": ""
+        }
+      ]
     }
   ],
-  "SMR": [
-    {}
-  ],
-  "DAM": [
+  "gradeModules": [
     {
-      "id": "0",
-      "grade": "1 DAM",
-      "name:": "Programación",
-      "acronyms": "PRO"
+      "1SMR": [
+        {
+          "id": "0",
+          "gradeId": "0",
+          "name": "Redes de Área Local",
+          "acronyms": "REDL",
+          "classwork": [],
+          "exam": []
+        },
+        {
+          "id": "1",
+          "gradeId": "0",
+          "name": "Aplicaciones Ofimáticas",
+          "acronyms": "AOF",
+          "classwork": [],
+          "exam": []
+        }
+      ]
     },
     {
-      "id": "1",
-      "grade": "1 DAM",
-      "name:": "Lenguaje de Marcas",
-      "acronyms": "LM"
+      "2SMR": [
+        {
+          "id": "0",
+          "gradeId": "1",
+          "name": "Seguridad Informática",
+          "acronyms": "SI",
+          "classwork": [],
+          "exam": []
+        },
+        {
+          "id": "1",
+          "gradeId": "1",
+          "name": "Sistemas Operativos en Red",
+          "acronyms": "SOM",
+          "classwork": [],
+          "exam": []
+        }
+      ]
     },
     {
-      "moduleId": "2",
-      "grade": "2 DAM",
-      "name:": "Acceso a Datos",
-      "acronyms": "AD"
+      "1DAM": [
+        {
+          "id": "0",
+          "gradeId": "2",
+          "name": "Programación",
+          "acronyms": "PRO",
+          "classwork": [],
+          "exam": []
+        },
+        {
+          "id": "1",
+          "gradeId": "2",
+          "name": "Lenguaje de Marcas",
+          "acronyms": "LM",
+          "classwork": [],
+          "exam": []
+        }
+      ]
     },
     {
-      "moduleId": "3",
-      "grade": "2 DAM",
-      "name:": "Desarrollo de Interfaces",
-      "acronyms": "DI"
+      "2DAM": [
+        {
+          "id": "0",
+          "gradeId": "3",
+          "name": "Acceso a Datos",
+          "acronyms": "AD",
+          "classwork": [],
+          "exam": []
+        },
+        {
+          "id": "1",
+          "gradeId": "3",
+          "name": "Desarrollo de Interfaces",
+          "acronyms": "DI",
+          "classwork": [],
+          "exam": []
+        }
+      ]
+    },
+    {
+      "1DAW": [
+        {}
+      ]
+    },
+    {
+      "2DAW": [
+        {}
+      ]
+    },
+    {
+      "1ASIR": [
+        {}
+      ]
+    },
+    {
+      "2ASIR": [
+        {}
+      ]
     }
-  ],
-  "DAW": [
-    {}
-  ],
-  "ASIR": [
-    {}
   ],
   "tasksData": [
     {
       "id": "0",
       "grade": "1 DAM",
       "module": "PRO",
-      "name": "Unidad 1",
-      "type": "exam",
-      "info": ""
+      "name": "Unidad 1,2",
+      "type": "classwork",
+      "info": "lala",
+      "date": "2022-02-12T11:45:00+01:00"
     },
     {
       "id": "1",
       "grade": "2 DAM",
-      "module": "1",
+      "module": "AD",
       "name": "Unidad 1,2",
       "type": "classwork",
-      "info": "lalalalaal"
+      "info": "lala",
+      "date": "2022-02-12T08:15:00+01:00"
+    },
+    {
+      "grade": "123",
+      "module": "123",
+      "name": "123",
+      "type": "123",
+      "info": "123",
+      "date": "",
+      "id": "i6B29VA"
+    },
+    {
+      "grade": "123",
+      "module": "123",
+      "name": "123",
+      "type": "123",
+      "info": "123",
+      "date": "",
+      "id": "M2vbuoC"
+    },
+    {
+      "grade": "123",
+      "module": "123",
+      "name": "123",
+      "type": "123",
+      "info": "123",
+      "date": "2022-12-10T22:54:00+01:00",
+      "id": "KLVzC7L"
     }
   ],
   "assignmentsData": [
     {
+      "id": "0",
       "taskId": "0",
-      "dateTime": "'2022-02-12T11:30:00+01:00'"
+      "date": "'2022-02-12T11:45:00+01:00'"
+    },
+    {
+      "id": "1",
+      "taskId": "1",
+      "date": "'2022-02-12T08:15:00+01:00'"
     }
   ]
 }

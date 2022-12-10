@@ -12,7 +12,11 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
+          
           "options": {
+            "allowedCommonJsDependencies": [
+            "lodash"
+            ],
             "outputPath": "www",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -85,9 +89,6 @@
             },
             "development": {
               "browserTarget": "app:build:development"
-            },
-            "ci": {
-              "progress": false
             }
           },
           "defaultConfiguration": "development"

@@ -9,6 +9,5 @@ import { CoreModule } from 'src/app/core/core.module';
     StudentsPageRoutingModule
   ],
   declarations: [StudentsPage],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class StudentsPageModule {}

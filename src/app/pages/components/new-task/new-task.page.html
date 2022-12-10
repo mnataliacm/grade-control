@@ -27,6 +27,11 @@
       <ion-input [(ngModel)]="_tasks.info" placeholder="Enter information"></ion-input>
     </ion-item>
     <ion-item>
+      <ion-label>{{ 'detail.date' | translate }}</ion-label>
+      <!-- <ion-input [(ngModel)]="_tasks.date"></ion-input> -->
+      <app-date-time-select [selectedDateTime]="_tasks.date" (onDatetimeChange)="onTaskDateTime($event, _tasks)"></app-date-time-select>
+    </ion-item>
+    <ion-item>
       <ion-button (click)="submitFormTask()">{{ 'button.new' | translate }}
       </ion-button>
       <ion-button [routerLink]="'/tasks'" color="danger" size="small">

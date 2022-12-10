@@ -6,6 +6,7 @@
     "student": "Alumnos",
     "tasks": "Tareas",
     "assign": "Asignar fechas",
+    "modules": "Modulos",
     "calendar": "Horario",
     "info": "Acerca de",
     "language": "Elige idioma: ",
@@ -21,10 +22,12 @@
     "image": "Imagen",
     "email": "Email",
     "grade": "Curso",
+    "level": "Nivel",
     "module": "Modulo",
     "type": "Tarea",
     "info": "Información",
-    "warning": "Advertencia"
+    "warning": "Advertencia",
+    "date": "Fecha"
   },
   "people": {
     "name": "Introduce el nombre ...",

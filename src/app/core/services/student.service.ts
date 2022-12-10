@@ -37,7 +37,7 @@ export class StudentService {
   };
 
   // Create a new item
-  createStudent(student: any): Observable<StudentModel> {
+  createStudent(student: StudentModel): Observable<StudentModel> {
     return this.http
       .post<StudentModel>(this.base_path + '/', JSON.stringify(student), this.httpOptions)
       .pipe(
@@ -67,7 +67,7 @@ export class StudentService {
   }
 
   // Update item by id
-  updateStudent(id: string, student: undefined): Observable<StudentModel> {
+  updateStudent(id: string, student: StudentModel): Observable<StudentModel> {
     return this.http
       .put<StudentModel>(this.base_path + '/' + id, JSON.stringify(student), this.httpOptions)
       .pipe(
