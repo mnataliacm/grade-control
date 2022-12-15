@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { isLowResolution as lowres} from 'src/app/utils/screen.utils';
 
 @Component({
   selector: 'app-about',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.page.scss'],
 })
 export class AboutPage implements OnInit {
+
+  isLowResolution:()=>boolean = lowres;
 
   constructor() { }
 

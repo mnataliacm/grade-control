@@ -7,6 +7,66 @@
   </ion-toolbar>
 </ion-header>
 
+<ion-content *ngIf="isLowResolution()" class="ion-padding">
+  <ion-item class="ion-padding"  lines="none">
+    <ion-thumbnail>
+    <ion-img src="../../../assets/images/yo.jpg" alt="app logo"></ion-img>
+    </ion-thumbnail>
+    <ion-label><h1>Natalia Castillo Muñoz</h1></ion-label>
+  </ion-item>
+  
+<ion-list>
+  <ion-item-group>
+    <ion-item lines="none">
+      <h3>ESTUDIOS</h3>
+    </ion-item>
+  </ion-item-group>
+
+<h5>CFGS Desarrollo de Aplicaciones Multiplataforma</h5>
+<h6>(2021-    ) CPIFP Tech Park Málaga</h6>
+
+<h5>CFGM Sistemas Microinformáticos y Redes</h5>
+<h6>(2019-2021) FPIES Campanillas (PTA Málaga)</h6>
+
+
+<h5>E.S.O. (Escuela de Adultos - E.S.A.)</h5>
+<h6>(2018-2019) IES Valle del Azahar (Estación de Cártama, Málaga)</h6>
+
+</ion-list>
+</ion-content>
+
+<ion-content *ngIf="!isLowResolution()">
+  
+  <ion-item class="ion-padding" lines="none">
+    <ion-thumbnail>
+    <ion-img src="../../../assets/images/yo.jpg" alt="app logo" ></ion-img>
+    </ion-thumbnail>
+    <ion-label><h1>Natalia Castillo Muñoz</h1></ion-label>
+  </ion-item>
+  
+<ion-list>
+  <ion-item-group>
+    <ion-item lines="none">
+      <h3>ESTUDIOS</h3>
+    </ion-item>
+  </ion-item-group>
+
+<h5>CFGS Desarrollo de Aplicaciones Multiplataforma</h5>
+<h6>(2021-    ) CPIFP Tech Park Málaga</h6>
+
+<h5>CFGM Sistemas Microinformáticos y Redes</h5>
+<h6>(2019-2021) FPIES Campanillas (PTA Málaga)</h6>
+
+
+<h5>E.S.O. (Escuela de Adultos - E.S.A.)</h5>
+<h6>(2018-2019) IES Valle del Azahar (Estación de Cártama, Málaga)</h6>
+
+</ion-list>
+</ion-content>
+
+
+
+<!--
 <ion-content>
 <ion-content class="app ion-padding">
   <h1>Grade Control</h1>
@@ -20,7 +80,7 @@
   <p>{{ 'about.line4' | translate }}</p>
   <p>{{ 'about.line5' | translate }}</p>
 </ion-content>
-</ion-content>
+</ion-content> -->
 <ion-footer>
   <ion-row>
     <ion-col sizeXl="3" sizeXs="12">
