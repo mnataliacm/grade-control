@@ -7,9 +7,7 @@
       "email": "natalia@email.com",
       "picture": "https://cdn.onlinewebfonts.com/svg/img_508995.png",
       "grade": "DAM",
-      "level": "2º",
-      "classwork": [],
-      "exam": []
+      "level": "second"
     },
     {
       "id": "1",
@@ -17,10 +15,8 @@
       "surname": "González",
       "email": "francisco@email.com",
       "picture": "https://c.pxhere.com/photos/fa/a8/laugh_boy_young_people_young_pink_man_person_human-947184.jpg!d",
-      "grade": "2",
-      "level": "2º",
-      "classwork": [],
-      "exam": []
+      "grade": "DAW",
+      "level": "1º"
     },
     {
       "id": "2",
@@ -28,10 +24,8 @@
       "surname": "lala",
       "email": "lala@email.com",
       "picture": "",
-      "grade": "123",
-      "level": "2º",
-      "classwork": [],
-      "exam": []
+      "grade": "SMR",
+      "level": "1º"
     },
     {
       "name": "3",
@@ -39,9 +33,7 @@
       "email": "123",
       "grade": "DAW",
       "level": "2º",
-      "id": "5eMp_8i",
-      "classwork": [],
-      "exam": []
+      "id": "5eMp_8i"
     },
     {
       "id": "4",
@@ -49,16 +41,63 @@
       "surname": "qwerqweer",
       "email": "qwrqw@gmail.com",
       "picture": "asfdsaf",
-      "grade": "safsadfsa",
-      "level": "2º",
-      "classwork": [],
-      "exam": []
+      "grade": "ASIR",
+      "level": "2º"
+    },
+    {
+      "id": "5",
+      "name": "12",
+      "surname": "12",
+      "email": "12@e.f",
+      "picture": "",
+      "grade": "11",
+      "level": "11"
+    },
+    {
+      "id": "8nBC2Am",
+      "name": "123",
+      "surname": "123 456 789",
+      "email": "123@j.j",
+      "grade": "DAW",
+      "level": "1º"
+    },
+    {
+      "id": "RPeBrZL",
+      "name": "123 456",
+      "surname": "123",
+      "email": "123@e.c",
+      "grade": "SMR",
+      "level": "1º"
+    },
+    {
+      "id": "goscwiD",
+      "name": "123",
+      "surname": "123",
+      "email": "123@e.e",
+      "grade": "123",
+      "level": "123"
+    },
+    {
+      "id": "DPbsEcP",
+      "name": "123",
+      "surname": "123",
+      "email": "123@e.e",
+      "grade": "ASIR",
+      "level": "Primero"
+    },
+    {
+      "id": "Bbp5Uv8",
+      "name": "789",
+      "surname": "789",
+      "email": "789@email.com",
+      "grade": "SMR",
+      "level": "first"
     }
   ],
   "gradesData": [
     {
       "id": "0",
-      "name": "Sistemas Microinformáticos y Redes",
+      "name": "Sistemas Microinformáticos y Redes12",
       "acronym": "SMR",
       "first": [
         {
@@ -131,6 +170,23 @@
           "acronym": ""
         }
       ]
+    },
+    {
+      "id": "5",
+      "name": "Sin Asignar",
+      "acronym": "",
+      "first": [
+        {
+          "module": "",
+          "acronym": ""
+        }
+      ],
+      "second": [
+        {
+          "module": "",
+          "acronym": ""
+        }
+      ]
     }
   ],
   "gradeModules": [
@@ -139,7 +195,7 @@
         {
           "id": "0",
           "gradeId": "0",
-          "name": "Redes de Área Local",
+          "name": "Redes de Área Local34",
           "acronyms": "REDL",
           "classwork": [],
           "exam": []
@@ -238,7 +294,8 @@
   "tasksData": [
     {
       "id": "0",
-      "grade": "1 DAM",
+      "level": "1º",
+      "grade": "DAM",
       "module": "PRO",
       "name": "Unidad 1,2",
       "type": "classwork",
@@ -247,7 +304,8 @@
     },
     {
       "id": "1",
-      "grade": "2 DAM",
+      "level": "2º",
+      "grade": "DAM",
       "module": "AD",
       "name": "Unidad 1,2",
       "type": "classwork",
@@ -255,31 +313,44 @@
       "date": "2022-02-12T08:15:00+01:00"
     },
     {
-      "grade": "123",
-      "module": "123",
-      "name": "123",
-      "type": "123",
-      "info": "123",
-      "date": "",
-      "id": "i6B29VA"
+      "id": "7AMl8fu",
+      "level": "2º",
+      "grade": "DAW",
+      "module": "987",
+      "name": "987",
+      "type": "987",
+      "info": "987",
+      "date": "2022-12-26T00:12+01:00"
     },
     {
-      "grade": "123",
-      "module": "123",
-      "name": "123",
-      "type": "123",
-      "info": "123",
-      "date": "",
-      "id": "M2vbuoC"
+      "id": "x3IjmnY",
+      "level": "1º",
+      "grade": "DAW",
+      "module": "987",
+      "name": "987",
+      "type": "97",
+      "info": "987",
+      "date": "2022-12-21T00:13+01:00"
     },
     {
-      "grade": "123",
+      "id": "Llhmzwh",
+      "level": "2º",
+      "grade": "DAM",
       "module": "123",
       "name": "123",
       "type": "123",
-      "info": "123",
-      "date": "2022-12-10T22:54:00+01:00",
-      "id": "KLVzC7L"
+      "info": "123123",
+      "date": "2022-12-22T12:23+01:00"
+    },
+    {
+      "id": "uEQroaN",
+      "level": "1º",
+      "grade": "ASIR",
+      "module": "Sistemas",
+      "name": "Unidad 2",
+      "type": "Examen",
+      "info": "",
+      "date": "2022-12-20T18:59+01:00"
     }
   ],
   "assignmentsData": [
@@ -292,6 +363,13 @@
       "id": "1",
       "taskId": "1",
       "date": "'2022-02-12T08:15:00+01:00'"
+    }
+  ],
+  "studentModule": [
+    {
+      "id": "0",
+      "gradeId": "1",
+      "studenId": "0"
     }
   ]
 }

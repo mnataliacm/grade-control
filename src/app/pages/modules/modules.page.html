@@ -3,12 +3,12 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-      <ion-title>{{ 'home.modules' | translate | uppercase }}</ion-title>
+    <ion-title>{{ 'home.modules' | translate | uppercase }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-  <ion-accordion-group *ngFor="let grade of _grades" >
+  <ion-accordion-group *ngFor="let grade of _grades">
     <ion-item-divider>{{ grade.name}}</ion-item-divider>
 
     <ion-accordion class="ion-padding">
@@ -16,7 +16,7 @@
         <ion-label>1º {{ grade.acronym}}</ion-label>
       </ion-item>
       <div class="ion-padding" slot="content" *ngFor="let m of grade.first">
-        {{ m.module }} 
+        {{ m.module }}
       </div>
     </ion-accordion>
 
@@ -25,7 +25,7 @@
         <ion-label>2º {{ grade.acronym}}</ion-label>
       </ion-item>
       <div class="ion-padding" slot="content" *ngFor="let m of grade.second">
-        {{ m.module }} 
+        {{ m.module }}
       </div>
     </ion-accordion>
 

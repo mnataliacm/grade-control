@@ -6,7 +6,7 @@ import { EditStudentPage } from './edit-student.page';
 const routes: Routes = [
   {
     path: '',
-    redirectTo:'new',
+    redirectTo:'-1',
     pathMatch:'full'
   },
   {

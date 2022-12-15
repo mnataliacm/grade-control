@@ -25,8 +25,8 @@ export class EditStudentPage implements OnInit {
       surname:["", Validators.required],
       email:["", [Validators.required, Validators.email]],
       picture:[""],
-      grade:[""],
-      level:[""],
+      grade:["", Validators.required],
+      level:["", Validators.required],
     });
   }
 
@@ -48,7 +48,13 @@ export class EditStudentPage implements OnInit {
   onSubmit(){
     var student = this.form.value;
     if(student.id!="-1")
-      this.studentsSvc.updateStudent(student.id, student);
+      this.studentsSvc.updateStudent(student.id, student).subscribe(
+        {next:(data)=>{
+          this.router.navigate(['students']);
+        },error:err=>{
+          console.log(err);
+        }}
+      );
     else
       this.studentsSvc.createStudent(student).subscribe(
         {next:(data)=>{

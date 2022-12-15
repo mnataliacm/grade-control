@@ -11,7 +11,7 @@
     "info": "About",
     "language": "Change language: ",
     "spa": "spain flag icon",
-    "eng": "united kingdom flag icon"
+    "eng": "united kingdom flag icon"    
   },
   "detail": {
     "titleS": "Studens data",
@@ -27,7 +27,8 @@
     "type": "Task",
     "info": "Information",
     "warning": "Warning",
-    "date": "Date"
+    "date": "Date",
+    "select": "Selecct one"
   },
   "people": {
     "name": "Enter the name ...",
@@ -46,9 +47,12 @@
     "warning": "Unable to delete this task because it already has a due date"
   },
   "assign": {
-    "person": "Select grade",
+    "grade": "Select grade",
+    "level": "Select level",
     "task": "Select task",
-    "date": "Select date and time"
+    "date": "Select date and time",
+    "first": "First",
+    "second": "Second"
   },
   "button": {
     "new": "Create",

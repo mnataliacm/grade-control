@@ -1,13 +1,13 @@
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, catchError, Observable, retry, throwError } from 'rxjs';
+import { catchError, Observable, of, retry, throwError } from 'rxjs';
 import { StudentModel } from '../models';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StudentService {
-  
+
   base_path = 'http://localhost:3000/studentsData';
   addStudent = true;
 
@@ -38,8 +38,16 @@ export class StudentService {
 
   // Create a new item
   createStudent(student: StudentModel): Observable<StudentModel> {
+    var newStudent = {
+      id: "",
+      name: student.name,
+      surname: student.surname,
+      email: student.email,
+      grade: student.grade,
+      level: student.level
+    }
     return this.http
-      .post<StudentModel>(this.base_path + '/', JSON.stringify(student), this.httpOptions)
+      .post<StudentModel>(this.base_path + '/', JSON.stringify(newStudent), this.httpOptions)
       .pipe(
         retry(2),
         catchError(this.handleError)
@@ -57,11 +65,13 @@ export class StudentService {
   }
 
   // Get Peoples data
-  getListStudent(): Observable<StudentModel> {
+  getListStudent(grade: string | null = null): Observable<StudentModel[]> {
+    var params = {};
+    if (grade != null)
+      params = { params: { grade: grade } };
     return this.http
-      .get<StudentModel>(this.base_path + '/')
+      .get<StudentModel[]>(this.base_path + '/', params)
       .pipe(
-        retry(2),
         catchError(this.handleError)
       )
   }
@@ -71,17 +81,17 @@ export class StudentService {
     return this.http
       .put<StudentModel>(this.base_path + '/' + id, JSON.stringify(student), this.httpOptions)
       .pipe(
-        retry(2),
         catchError(this.handleError)
       )
   }
 
   // Delete item by id
-  deleteStudent(id: string) {
+  deleteStudent(id: string | undefined) {
+    if (!id)
+      return of({});
     return this.http
       .delete<StudentModel>(this.base_path + '/' + id, this.httpOptions)
       .pipe(
-        retry(2),
         catchError(this.handleError)
       )
   }

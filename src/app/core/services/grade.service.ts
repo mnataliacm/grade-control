@@ -1,6 +1,6 @@
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, catchError, Observable, retry, throwError } from 'rxjs';
+import { catchError, Observable, retry, throwError } from 'rxjs';
 import { GradeModel } from '../models';
 
 @Injectable({
@@ -37,7 +37,6 @@ export class GradeService {
     return this.http
       .post<GradeModel>(this.base_path + '/', JSON.stringify(grade), this.httpOptions)
       .pipe(
-        retry(2),
         catchError(this.handleError)
       )
   }
@@ -46,7 +45,6 @@ export class GradeService {
     return this.http
       .get<GradeModel>(this.base_path + '/' + id)
       .pipe(
-        retry(2),
         catchError(this.handleError)
       )
   }
@@ -55,7 +53,6 @@ export class GradeService {
     return this.http
       .get<GradeModel>(this.base_path + '/')
       .pipe(
-        retry(2),
         catchError(this.handleError)
       )
   }
@@ -64,7 +61,6 @@ export class GradeService {
     return this.http
       .put<GradeModel>(this.base_path + '/' + id, JSON.stringify(grade), this.httpOptions)
       .pipe(
-        retry(2),
         catchError(this.handleError)
       )
   }
@@ -73,9 +69,8 @@ export class GradeService {
     return this.http
       .delete<GradeModel>(this.base_path + '/' + id, this.httpOptions)
       .pipe(
-        retry(2),
         catchError(this.handleError)
       )
   }
-  
+
 }

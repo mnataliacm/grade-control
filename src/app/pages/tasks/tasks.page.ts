@@ -3,7 +3,7 @@ import { AlertController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
 import { lastValueFrom } from 'rxjs';
 import { TaskService } from 'src/app/core/services/task.service';
-import { isLowResolution as lowres} from 'src/app/utils/screen.utils';
+import { isLowResolution as lowres } from 'src/app/utils/screen.utils';
 
 @Component({
   selector: 'app-tasks',
@@ -59,7 +59,7 @@ export class TasksPage {
     const { role } = await alert.onDidDismiss();
   }
 
-  
+
 
   // constructor(
   //   public tasksSvc: TaskService,
@@ -80,7 +80,7 @@ export class TasksPage {
   //       task:task
   //     }
   //   });
-    
+
   //   modal.present();
   //   modal.onDidDismiss().then(result=>{
   //     if(result && result.data){
@@ -96,7 +96,7 @@ export class TasksPage {
   //     }
   //   });
   // }
-  
+
   // onNewTask(){
   //   this.presentTaskForm(null);  
   // }
@@ -128,7 +128,7 @@ export class TasksPage {
   //   await alert.present();
   //   const { role } = await alert.onDidDismiss();
   // }
-  
+
   // async onTaskExistsAlert(person) {
   //   const alert = await this.alert.create({
   //     header: await lastValueFrom(this.translate.get('detail.warning')),

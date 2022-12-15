@@ -11,7 +11,7 @@
     "info": "Acerca de",
     "language": "Elige idioma: ",
     "spa": "icono bandera españa",
-    "eng": "icono bandera reino unido"
+    "eng": "icono bandera reino unido"    
   },
   "detail": {
     "titleS": "Datos de los alumnos",
@@ -27,7 +27,8 @@
     "type": "Tarea",
     "info": "Información",
     "warning": "Advertencia",
-    "date": "Fecha"
+    "date": "Fecha",
+    "select": "Seleccione uno"
   },
   "people": {
     "name": "Introduce el nombre ...",
@@ -45,9 +46,12 @@
     "warning": "No se puede borrar esta tarea porque ya tiene fecha de entrega"
   },
   "assign": {
-    "curso": "Selecciona curso",
-    "task": "Selecciona tarea ",
-    "date": "Selecciona fecha y hora"
+    "grade": "Seleccione curso",
+    "level": "Seleccione nivel",
+    "task": "Seleccione tarea ",
+    "date": "Seleccione fecha y hora",
+    "first": "Primero",
+    "second": "Segundo"
   },
   "button": {
     "new": "Crear",

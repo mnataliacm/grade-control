@@ -1,7 +1,9 @@
 import { Component, OnInit, ViewContainerRef } from '@angular/core';
 import { CalendarOptions } from '@fullcalendar/core';
-import { StudentService } from 'src/app/core';
-import { TaskService } from 'src/app/core/services/task.service';
+import * as moment from 'moment';
+import esLocale from '@fullcalendar/core/locales/es';
+import { StudentService, TaskModel, TaskService } from 'src/app/core';
+
 
 @Component({
   selector: 'app-schedule',
@@ -13,45 +15,47 @@ export class SchedulePage implements OnInit {
   public calendarOptions: CalendarOptions = this.initCalendar();
 
   constructor(
-    //private assignmentsService:AssignmentService,
     private studentSvc: StudentService,
     private tasksSvc: TaskService,
     private containerRef: ViewContainerRef
   ) {
-    // this.assignmentsService._assigns$.subscribe((tasks)=>{     
+    // this.tasksSvc.getTask.subscribe((task: TaskModel)=>{     
     //   this.calendarOptions = {
     //     locale:esLocale,
-    //     initialView: 'timeGridDay',
+    //     initialView: 'timeGridWeek',
     //     height: 'auto',
-    //     slotDuration: '00:30:00',
-    //     slotLabelInterval: '00:30',
+    //     slotDuration: '01:00:00',
+    //     slotLabelInterval: '01:00',
+    //     slotMinTime: '08:00:00',
+    //     slotMaxTime: '16:00:00',
+    //     weekends: false,
     //     eventOverlap:false,
     //     contentHeight:'auto',
     //     eventChange:(event)=>{
     //       console.log(event.event.start);
-    //       console.log(event.event.extendedProps.assignment.dateTime)         
-    //       var assignment = {...event.event.extendedProps.assignment};
-    //       assignment.dateTime = moment(event.event.start).toISOString();
-    //       this.assignmentsService.updateAssignment(assignment);         
+    //       console.log(event.event.extendedProps['task'].date)         
+    //       var task = {...event.event.extendedProps['task']};
+    //       task.date = moment(event.event.start).toISOString();
+    //       this.tasksSvc.updateTask(task.id, task);         
     //     },
     //     editable:true,
-    //     events: tasks.map(a=>{
-    //       var task = this.tasksService.getTaskById(a.taskId);
+    //     events: task.map((a: { id: any; date: moment.MomentInput; })=>{
+    //       var task = this.tasksSvc.getTask(a.id);
     //       return {
     //         "title":task.name, 
-    //         "start":moment(a.dateTime).toISOString(), 
-    //         "end":moment(a.dateTime).add(task.time, 'seconds').toISOString(),
+    //         "start":moment(a.date).toISOString(), 
+    //         "end":moment(a.date).add(task.date, 'seconds').toISOString(),
     //         "assignment":a
     //       };
     //     }),
     //     eventContent:(arg)=>{
-    //       var comp:ComponentRef<AssignmentScheduleComponent> = this.containerRef.createComponent(AssignmentScheduleComponent);
-    //       comp.instance.assign = arg.event.extendedProps.assignment;
-    //       return { domNodes: [comp.location.nativeElement] }
+    //         var comp:ComponentRef<AssignmentScheduleComponent> = this.containerRef.createComponent(AssignmentScheduleComponent);
+    //         comp.instance.assign = arg.event.extendedProps.task;
+    //         return { domNodes: [comp.location.nativeElement] }
 
-    //     }
-    //  };     
-    //});
+    //       }
+    //    };     
+    //   });
   }
 
   public ngOnInit(): void {
@@ -70,23 +74,14 @@ export class SchedulePage implements OnInit {
       editable: true,
       slotMinTime: '08:00:00',
       slotMaxTime: '16:00:00',
-      // eventLimit: true,
-      // weekend: false,
-      // columnFormat: 'dddd',
-      // header: {
-      //   	left: 'prev,next today',
-      //   	center: 'title',
-      //   	right: 'month,agendaWeek,agendaDay'
-      //   },
-    //   businessHours: {
-    //     daysOfWeek: [ 1, 2, 3, 4, 5 ],
-    // startTime: '08:00',
-    // endTime: '1:00',
-    //   },
-
+      weekends: false,
+      businessHours: {
+        daysOfWeek: [1, 2, 3, 4, 5],
+        startTime: '08:00',
+        endTime: '1:00',
+      },
       events: [
       ],
     };
   }
-
 }

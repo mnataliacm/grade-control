@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { GradeModel, GradeService, TaskModel } from 'src/app/core';
 import { TaskService } from 'src/app/core/services/task.service';
 
 @Component({
@@ -10,36 +10,60 @@ import { TaskService } from 'src/app/core/services/task.service';
 })
 export class EditTaskPage implements OnInit {
 
-  id: any;
-  task: any;
-  grades: any;
+  form: FormGroup;
 
   constructor(
+    private formBuilder: FormBuilder,
     private route: ActivatedRoute,
     private router: Router,
-    private taskSvc: TaskService,
-    private gradeSvc: GradeService
+    private taskSvc: TaskService
   ) { 
-    this.task = new TaskModel();
-    this.grades = new GradeModel();
+    this.form = this.formBuilder.group({
+      id:[""],
+      level:["", Validators.required],
+      grade:["", Validators.required],
+      module:["", Validators.required],
+      name:["", [Validators.required]],
+      type:[""],
+      info:[""],
+      date:[new Date().toISOString()]
+    });
   }
 
   ngOnInit() {
-    this.id = this.route.snapshot.params['id'];
-    this.taskSvc.getTask(this.id).subscribe(response => {
-      console.log(response);
-      this.task = response;
-    })
-    this.gradeSvc.getGrade(this.id).subscribe(response => {
-      console.log(response);
-      this.task = response;
-    })
+    var id = this.route.snapshot.params['id'];
+    this.form.controls['id'].setValue(id);
+    if(id!="-1")
+      this.taskSvc.getTask(id).subscribe(response => {
+        console.log(response);
+        this.form.controls['level'].setValue(response.level);
+        this.form.controls['grade'].setValue(response.grade);
+        this.form.controls['module'].setValue(response.module);
+        this.form.controls['name'].setValue(response.name);
+        this.form.controls['type'].setValue(response.type);
+        this.form.controls['info'].setValue(response.info);
+        this.form.controls['date'].setValue(response.date);
+      });
   }
 
-  updateTask() {
-    this.taskSvc.updateTask(this.id, this.task).subscribe(response => {
-      this.router.navigate(['tasks']);
-    })
+  onSubmit(){
+    var task = this.form.value;
+    if(task.id!="-1")
+      this.taskSvc.updateTask(task.id, task).subscribe(
+        {next:(data)=>{
+          this.router.navigate(['tasks']);
+        },error:err=>{
+          console.log(err);
+        }}
+      );
+    else
+      this.taskSvc.createTask(task).subscribe(
+        {next:(data)=>{
+          this.router.navigate(['tasks']);
+        },error:err=>{
+          console.log(err);
+        }}
+      );
   }
 
 }

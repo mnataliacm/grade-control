@@ -23,18 +23,28 @@
       <ion-input formControlName="picture"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>{{ 'detail.grade' | translate }}</ion-label>
-      <ion-input formControlName="grade">
-        <!-- <app-grade-select></app-grade-select> -->
-      </ion-input>
-
+      <ion-list>
+        <ion-label>{{ 'detail.grade' | translate }}</ion-label>
+        <ion-item>          
+          <ion-select placeholder="{{ 'assign.grade' | translate}}" formControlName="grade">
+            <ion-select-option value="SMR">SMR</ion-select-option>
+            <ion-select-option value="DAM">DAM</ion-select-option>
+            <ion-select-option value="DAW">DAW</ion-select-option>
+            <ion-select-option value="ASIR">ASIR</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
     </ion-item>
     <ion-item>
-      <ion-label>{{ 'detail.level' | translate }}</ion-label>
-      <ion-input formControlName="level"></ion-input>
-       <ion-item>
-          
+      <ion-list>
+        <ion-label>{{ 'detail.level' | translate }}</ion-label>
+        <ion-item>          
+          <ion-select placeholder="{{ 'assign.level' | translate}}" formControlName="level">
+            <ion-select-option value="1º">{{ 'assign.first' | translate}}</ion-select-option>
+            <ion-select-option value="2º">{{ 'assign.second' | translate}}</ion-select-option>
+          </ion-select>
         </ion-item>
+      </ion-list>
     </ion-item>
 
     <ion-button [disabled]="!form.valid" (click)="onSubmit()" color="success" size="small">

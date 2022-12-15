@@ -3,26 +3,26 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-      <ion-title>{{ 'home.tasks' | translate | uppercase }}</ion-title>
+    <ion-title>{{ 'home.tasks' | translate | uppercase }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content >
+<ion-content>
   <ion-fab slot="fixed" vertical="top" horizontal="end" [edge]="true">
-    <ion-fab-button value="newTask" [routerLink]="['/new-task']">
+    <ion-fab-button value="newTask" [routerLink]="['/edit-task']">
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
-  <ion-list>  
-    <ion-item></ion-item> 
+  <ion-list>
+    <ion-item></ion-item>
     <ion-item-sliding #sliding [disabled]="!isLowResolution()" *ngFor="let task of _tasks">
-      <ion-item >
-        <ion-title>{{task.grade}} - {{task.module}}</ion-title>
+      <ion-item>
+        <ion-title>{{task.level}} {{task.grade}} - {{task.module}}</ion-title>
         <ion-label>{{task.type}} - {{task.name}}</ion-label>
-        <ion-label  *ngIf="!isLowResolution()"> {{task.info}}</ion-label>
-        <ion-label  *ngIf="!isLowResolution()"> {{task.date}}</ion-label>    
+        <ion-label *ngIf="!isLowResolution()"> {{task.info}}</ion-label>
+        <ion-label *ngIf="!isLowResolution()"> {{task.date | date:'short'}}</ion-label>
         <ion-icon name="swap-horizontal" *ngIf="isLowResolution()"></ion-icon>
-        <ion-button class="item-expanded" *ngIf="!isLowResolution()" slot="end" routerLink='/edit-task/{{task.id}}' >
+        <ion-button class="item-expanded" *ngIf="!isLowResolution()" slot="end" routerLink='/edit-task/{{task.id}}'>
           <ion-icon name="pencil"></ion-icon>
           {{ 'button.edit' | translate }}
         </ion-button>
@@ -32,7 +32,7 @@
         </ion-button>
       </ion-item>
       <ion-item-options>
-        <ion-item-option routerLink='/edit-task/{{task.id}}' >
+        <ion-item-option routerLink='/edit-task/{{task.id}}'>
           <ion-icon slot="top" name="pencil-outline" color="success"></ion-icon>
         </ion-item-option>
         <ion-item-option (click)="delete(task)" color="light">
@@ -41,4 +41,4 @@
       </ion-item-options>
     </ion-item-sliding>
   </ion-list>
-</ion-content> 
+</ion-content>

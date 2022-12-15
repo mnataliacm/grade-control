@@ -1,42 +1,60 @@
-<ng-container >
-  <ion-header>
-    <ion-toolbar >
-      <ion-title>{{ 'detail.titleT' | translate }}</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ 'detail.titleT' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
 
-  <ion-content class="ion-padding">
+<ion-content class="ion-padding">
+  <form [formGroup]="form" (onSubmit)="onSubmit()">
+    
     <ion-item>
-      <ion-label>{{ 'detail.grade' | translate }}</ion-label>
-      <ion-input [(ngModel)]="task.grade"></ion-input>
+      <ion-list>
+        <ion-label>{{ 'detail.grade' | translate }}</ion-label>
+        <ion-item>
+          <ion-select placeholder="{{ 'assign.grade' | translate}}" formControlName="grade">
+            <ion-select-option value="SMR">SMR</ion-select-option>
+            <ion-select-option value="DAM">DAM</ion-select-option>
+            <ion-select-option value="DAW">DAW</ion-select-option>
+            <ion-select-option value="ASIR">ASIR</ion-select-option>
+          </ion-select>         
+        </ion-item>      
+      </ion-list>
+    </ion-item>
+    <ion-item>
+      <ion-list>
+        <ion-label>{{ 'detail.level' | translate }}</ion-label>
+        <ion-item>          
+          <ion-select placeholder="{{ 'assign.level' | translate}}" formControlName="level">
+            <ion-select-option value="1º">{{ 'assign.first' | translate}}</ion-select-option>
+            <ion-select-option value="2º">{{ 'assign.second' | translate}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
     </ion-item>
     <ion-item>
       <ion-label>{{ 'detail.module' | translate }}</ion-label>
-      <ion-input [(ngModel)]="task.module"></ion-input>
+      <ion-input formControlName="module"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>{{ 'detail.name' | translate }}</ion-label>
-      <ion-input [(ngModel)]="task.name"></ion-input>
+      <ion-input formControlName="name"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>{{ 'detail.type' | translate }}</ion-label>
-      <ion-input [(ngModel)]="task.type"></ion-input>
+      <ion-input formControlName="type"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>{{ 'detail.info' | translate }}</ion-label>
-      <ion-input [(ngModel)]="task.info"></ion-input>
+      <ion-input formControlName="info"></ion-input>
     </ion-item>
-    <ion-item>
-      <ion-label>{{ 'detail.date' | translate }}</ion-label>
-      <ion-input [(ngModel)]="task.date"></ion-input>
-    </ion-item>
-    <ion-button (click)="updateTask()" color="success" size="small">
-      {{ 'button.edit' | translate }}
+    <ion-label>{{ 'detail.date' | translate }}: </ion-label>
+    <app-date-time-selectable formControlName="date"></app-date-time-selectable>
+
+    <ion-button [disabled]="!form.valid" (click)="onSubmit()" color="success" size="small">
+      {{ (form.controls['id'].value=="-1")? ('button.new' | translate):('button.edit' | translate) }}
     </ion-button>
     <ion-button [routerLink]="'/tasks'" color="danger" size="small">
       {{ 'button.cancel' | translate }}
     </ion-button>
-    <ion-input></ion-input>
-  </ion-content>
-</ng-container>
-
+  </form>
+</ion-content>

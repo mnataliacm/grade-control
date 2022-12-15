@@ -6,6 +6,11 @@ import { EditTaskPage } from './edit-task.page';
 const routes: Routes = [
   {
     path: '',
+    redirectTo:'-1',
+    pathMatch:'full'
+  },
+  {
+    path: ':id',
     component: EditTaskPage
   }
 ];

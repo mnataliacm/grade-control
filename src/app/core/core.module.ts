@@ -7,7 +7,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { createTranslateLoader } from 'src/app/core/utils/translate';
 import es from '@angular/common/locales/es';
 import en from '@angular/common/locales/en';
-import { DateTimeSelectComponent } from './components/date-time-select/date-time-select.component';
+import { DateTimeSelectableComponent } from './components/date-time-selectable/date-time-selectable.component';
 import { GradeSelectComponent, ProfileComponent } from './components';
 
 registerLocaleData(en);
@@ -16,7 +16,7 @@ registerLocaleData(es);
 @NgModule({
   declarations: 
   [
-    DateTimeSelectComponent,
+    DateTimeSelectableComponent,
     ProfileComponent,
     GradeSelectComponent,
   ],
@@ -35,7 +35,6 @@ registerLocaleData(es);
       }
     }),
     
-
   ],
   exports: 
   [
@@ -45,7 +44,7 @@ registerLocaleData(es);
     ReactiveFormsModule,
     HttpClientModule,
     TranslateModule,
-    DateTimeSelectComponent,
+    DateTimeSelectableComponent,
     ProfileComponent,
     GradeSelectComponent,
   ],
