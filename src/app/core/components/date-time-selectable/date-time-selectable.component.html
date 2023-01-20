@@ -1,6 +1,6 @@
 <ion-accordion-group [multiple]="true" #accordion>
   <ion-accordion value="first">
-    <ion-item slot="header" color="light">
+    <ion-item slot="header" >
       <ng-container *ngIf="hasValue">
         <ion-label>{{(date$ | async) | date:'short'}}</ion-label>
       </ng-container>

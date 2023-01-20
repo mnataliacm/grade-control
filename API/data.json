@@ -20,28 +20,19 @@
     },
     {
       "id": "2",
-      "name": "lalatete",
-      "surname": "lala",
-      "email": "lala@email.com",
+      "name": "Hanane",
+      "surname": "Arrazouki",
+      "email": "hanane.arrazouki@email.com",
       "picture": "",
-      "grade": "SMR",
-      "level": "1º"
+      "grade": "DAM",
+      "level": "first"
     },
     {
-      "name": "3",
-      "surname": "123",
-      "email": "123",
+      "id": "5eMp_8i",
+      "name": "Victor",
+      "surname": "Pelaez Martín",
+      "email": "victor.pelaez@email.com",
       "grade": "DAW",
-      "level": "2º",
-      "id": "5eMp_8i"
-    },
-    {
-      "id": "4",
-      "name": "qwerqwerqw",
-      "surname": "qwerqweer",
-      "email": "qwrqw@gmail.com",
-      "picture": "asfdsaf",
-      "grade": "ASIR",
       "level": "2º"
     },
     {
@@ -55,11 +46,11 @@
     },
     {
       "id": "RPeBrZL",
-      "name": "123 456",
-      "surname": "123",
-      "email": "123@e.c",
+      "name": "Antonio",
+      "surname": "Gutierrez López",
+      "email": "antonio.gutierrez@email.com",
       "grade": "SMR",
-      "level": "1º"
+      "level": "first"
     },
     {
       "id": "goscwiD",
@@ -71,27 +62,35 @@
     },
     {
       "id": "DPbsEcP",
-      "name": "123",
-      "surname": "123",
-      "email": "123@e.e",
+      "name": "Julian",
+      "surname": "Morales Jiménez",
+      "email": "julian.morales@email.com",
       "grade": "ASIR",
-      "level": "Primero"
+      "level": "1º"
     },
     {
       "id": "Bbp5Uv8",
-      "name": "789",
-      "surname": "789",
-      "email": "789@email.com",
+      "name": "María José",
+      "surname": "Comino Castillo",
+      "email": "maria.jose.comino@email.com",
       "grade": "ASIR",
-      "level": "first"
+      "level": "2º"
     },
     {
       "id": "9eROiVv",
-      "name": "123",
-      "surname": "123",
-      "email": "123@g.c",
+      "name": "Monica",
+      "surname": "Jiménez Artacho",
+      "email": "monica.jimenez@email.com",
+      "grade": "SMR",
+      "level": "second"
+    },
+    {
+      "id": "c_Qx8X9",
+      "name": "Veronica",
+      "surname": "González Pons",
+      "email": "veronica.gonzalez@email.com",
       "grade": "DAM",
-      "level": "1º"
+      "level": "first"
     }
   ],
   "gradesData": [
@@ -299,7 +298,7 @@
       "module": "PRO",
       "name": "Unidad 1,2",
       "type": "classwork",
-      "info": "lala",
+      "info": "Ejercicios 5,6,7 y 15,16,18",
       "date": "2022-02-12T11:45:00+01:00"
     },
     {
@@ -309,58 +308,28 @@
       "module": "AD",
       "name": "Unidad 1,2",
       "type": "classwork",
-      "info": "lala",
+      "info": "ejercicios de ambas unidades",
       "date": "2022-02-12T08:15:00+01:00"
-    },
-    {
-      "id": "7AMl8fu",
-      "level": "2º",
-      "grade": "DAW",
-      "module": "987",
-      "name": "987",
-      "type": "987",
-      "info": "987",
-      "date": "2022-12-26T00:12+01:00"
-    },
-    {
-      "id": "x3IjmnY",
-      "level": "1º",
-      "grade": "DAW",
-      "module": "987",
-      "name": "987",
-      "type": "97",
-      "info": "987",
-      "date": "2022-12-21T00:13+01:00"
     },
     {
       "id": "Llhmzwh",
       "level": "2º",
       "grade": "DAM",
-      "module": "123",
-      "name": "123",
-      "type": "123",
-      "info": "123123",
-      "date": "2022-12-22T12:23+01:00"
-    },
-    {
-      "id": "uEQroaN",
-      "level": "1º",
-      "grade": "ASIR",
-      "module": "Sistemas",
-      "name": "Unidad 2",
-      "type": "Examen",
+      "module": "EIE",
+      "name": "Tema 3",
+      "type": "examen",
       "info": "",
-      "date": "2022-12-20T18:59+01:00"
+      "date": "2023-01-23T12:23+01:00"
     },
     {
       "id": "pRJOkgU",
-      "level": "2º",
-      "grade": "DAM",
-      "module": "PRO",
-      "name": "laldsl",
-      "type": "examen",
-      "info": "ljlkjlk",
-      "date": "2022-12-21T12:08+01:00"
+      "level": "1º",
+      "grade": "SMR",
+      "module": "REDL",
+      "name": "Unidad 1",
+      "type": "ejercicios",
+      "info": "realizar todos los ejercicios de la unidad",
+      "date": "2023-01-20T15:38+01:00"
     }
   ],
   "assignmentsData": [

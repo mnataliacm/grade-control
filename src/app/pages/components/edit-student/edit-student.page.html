@@ -38,10 +38,10 @@
     <ion-item>
       <ion-list>
         <ion-label>{{ 'detail.level' | translate }}</ion-label>
-        <ion-item>          
-          <ion-select placeholder="{{ 'assign.level' | translate}}" formControlName="level">
-            <ion-select-option value="1º">{{ 'assign.first' | translate}}</ion-select-option>
-            <ion-select-option value="2º">{{ 'assign.second' | translate}}</ion-select-option>
+        <ion-item >          
+          <ion-select placeholder="{{ 'assign.level' | translate}}" formControlName="level" >
+            <ion-select-option value="first" class="secondary" style="background-color: black;">{{ 'assign.first' | translate}}</ion-select-option>
+            <ion-select-option value="second">{{ 'assign.second' | translate}}</ion-select-option>
           </ion-select>
         </ion-item>
       </ion-list>

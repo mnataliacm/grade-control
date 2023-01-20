@@ -28,7 +28,7 @@
 
 body {
   --ion-background-color: #426ae2;
-  --ion-text-color: white;
+  //--ion-text-color: white;
   --ion-toolbar-background: 	#068a85;
   --ion-toolbar-color: white;
 }
@@ -63,4 +63,12 @@ ion-item-option {
 }
 a {
   color: white;
+}
+
+ion-select-option {
+  color: black;
+}
+
+ion-content {
+  --ion-text-color: white;
 }

@@ -8,7 +8,7 @@ import { createTranslateLoader } from 'src/app/core/utils/translate';
 import es from '@angular/common/locales/es';
 import en from '@angular/common/locales/en';
 import { DateTimeSelectableComponent } from './components/date-time-selectable/date-time-selectable.component';
-import { GradeSelectComponent, ProfileComponent } from './components';
+import { AssignScheduleComponent, GradeSelectComponent, ProfileComponent } from './components';
 
 registerLocaleData(en);
 registerLocaleData(es);
@@ -19,6 +19,7 @@ registerLocaleData(es);
     DateTimeSelectableComponent,
     ProfileComponent,
     GradeSelectComponent,
+    AssignScheduleComponent
   ],
   imports: 
   [
@@ -47,6 +48,7 @@ registerLocaleData(es);
     DateTimeSelectableComponent,
     ProfileComponent,
     GradeSelectComponent,
+    AssignScheduleComponent
   ],
   providers: [
   {
