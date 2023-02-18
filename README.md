@@ -1,9 +1,11 @@
 # GRADE CONTROL
-Aplicacion realizada con ionic, angular y json server. 
+Aplicacion realizada con ionic, angular@14 y json server. 
 Para llevar el control de cursos, modulos, alumnos y tareas de las clases.
-Funcional en web y en móvil.
 
-
+* He instalado los siguientes complementos:
+    - rxjs, moment, moment-timezone, ionicons, @ngx-translate/core @ngx-translate/http-loader
+    - Y para el Calendario:
+      - @fullcalendar/angular @fullcalendar/core @fullcalendar/daygrid @fullcalendar/scrollgrid @fullcalendar/timegrid @fullcalendar/interaction @fullcalendar/bootstrap @fullcalendar/list
 # Vista web
 
 ![imagen](https://user-images.githubusercontent.com/74043250/213555418-a48f0c8c-5ebb-4513-9cfb-a3db58e5b13c.png)
