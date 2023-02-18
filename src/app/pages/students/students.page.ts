@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { AlertController, ModalController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
-import { lastValueFrom, Observable } from 'rxjs';
+import { lastValueFrom } from 'rxjs';
 import { ProfileComponent, StudentModel } from 'src/app/core';
 import { GradeService, StudentService } from 'src/app/core/services';
 
@@ -13,7 +13,7 @@ import { GradeService, StudentService } from 'src/app/core/services';
 export class StudentsPage {
 
   _students: StudentModel[]=[];
-  _grades: any
+  _grades: any;
 
   constructor(
     private studentSvc: StudentService,

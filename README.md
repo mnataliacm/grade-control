@@ -1,5 +1,6 @@
 # GRADE CONTROL
-Aplicacion realizada con ionic, angular y json server. Para llevar el control de alumnos y notas de las clases.
+Aplicacion realizada con ionic, angular y json server. 
+Para llevar el control de alumnos y notas de las clases.
 Funcional en web y en móvil.
 
 
