@@ -1,6 +1,6 @@
 # GRADE CONTROL
 Aplicacion realizada con ionic, angular y json server. 
-Para llevar el control de alumnos y notas de las clases.
+Para llevar el control de cursos, modulos, alumnos y tareas de las clases.
 Funcional en web y en móvil.
 
 
@@ -11,6 +11,7 @@ Funcional en web y en móvil.
 # Vista móvil
 
 ![imagen](https://user-images.githubusercontent.com/74043250/213555533-72ded100-0f9e-437e-8b76-93c1824a53ed.png)
+![imagen](https://user-images.githubusercontent.com/74043250/219872690-60eda332-2b81-43b5-8b57-974671111080.png)
 
 ## Modulos y Estudiantes
 ![imagen](https://user-images.githubusercontent.com/74043250/213750120-fe1a2a6a-f2ad-41c5-9cb3-27374567bef6.png)
